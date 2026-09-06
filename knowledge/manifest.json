@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-08-26T14:08:12.829566Z",
+  "stats": {
+    "sources_discovered": 306,
+    "sources_copied": 0,
+    "chunks_created": 20000,
+    "total_tokens": 2773825,
+    "errors": []
+  },
+  "chunk_count": 20000,
+  "source_types": {
+    "reference": 276,
+    "lecture": 12,
+    "transcript_vtt": 4,
+    "other": 10,
+    "transcript_clean": 1,
+    "tutorial": 3
+  }
+}

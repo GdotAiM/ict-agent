@@ -1,0 +1,469 @@
+id,ts,session_id,symbol,mode,week_label,stage,metric_name,metric_value,meta
+1,2026-08-24T14:27:05.547164+00:00,EURUSD_X_20260824T142703_e9a143,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+2,2026-08-24T14:27:06.005047+00:00,EURUSD_X_20260824T142703_e9a143,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+3,2026-08-24T14:27:06.024865+00:00,EURUSD_X_20260824T142703_e9a143,EURUSD,chained,,htf_bias,gate.retries,1,{}
+4,2026-08-24T14:28:44.909249+00:00,EURUSD_X_20260824T142843_256088,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+5,2026-08-24T14:28:45.350713+00:00,EURUSD_X_20260824T142843_256088,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+6,2026-08-24T14:28:45.403964+00:00,EURUSD_X_20260824T142843_256088,EURUSD,chained,,htf_bias,gate.retries,1,{}
+7,2026-08-24T14:31:36.115418+00:00,EURUSD_X_20260824T143134_c6a9d2,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+8,2026-08-24T14:31:36.556908+00:00,EURUSD_X_20260824T143134_c6a9d2,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+9,2026-08-24T14:31:36.614031+00:00,EURUSD_X_20260824T143134_c6a9d2,EURUSD,chained,,htf_bias,gate.retries,1,{}
+10,2026-08-24T14:52:31.192053+00:00,XAUUSD_20260824T145225_096f74,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+11,2026-08-24T14:52:31.853339+00:00,XAUUSD_20260824T145225_096f74,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+12,2026-08-24T14:52:31.884466+00:00,XAUUSD_20260824T145225_096f74,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+13,2026-08-24T14:54:23.313825+00:00,XAUUSD_20260824T145414_6107e5,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+14,2026-08-24T14:54:23.980767+00:00,XAUUSD_20260824T145414_6107e5,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+15,2026-08-24T14:54:23.989777+00:00,XAUUSD_20260824T145414_6107e5,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+16,2026-08-24T14:57:30.168538+00:00,XAUUSD_20260824T145725_14869b,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+17,2026-08-24T14:57:30.795418+00:00,XAUUSD_20260824T145725_14869b,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+18,2026-08-24T14:57:30.843976+00:00,XAUUSD_20260824T145725_14869b,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+19,2026-08-24T15:05:04.918351+00:00,XAUUSD_20260824T150459_264b9d,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+20,2026-08-24T15:05:05.588438+00:00,XAUUSD_20260824T150459_264b9d,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+21,2026-08-24T15:05:05.597643+00:00,XAUUSD_20260824T150459_264b9d,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+22,2026-08-24T15:06:12.532007+00:00,XAUUSD_20260824T150608_84daf5,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+23,2026-08-24T15:06:13.196037+00:00,XAUUSD_20260824T150608_84daf5,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+24,2026-08-24T15:06:13.206692+00:00,XAUUSD_20260824T150608_84daf5,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+25,2026-08-24T15:07:32.851167+00:00,XAUUSD_20260824T150728_29401e,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+26,2026-08-24T15:07:33.475066+00:00,XAUUSD_20260824T150728_29401e,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+27,2026-08-24T15:07:33.529630+00:00,XAUUSD_20260824T150728_29401e,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+28,2026-08-24T15:09:33.548141+00:00,XAUUSD_20260824T150924_50a0b8,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+29,2026-08-24T15:09:34.282817+00:00,XAUUSD_20260824T150924_50a0b8,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+30,2026-08-24T15:09:34.338391+00:00,XAUUSD_20260824T150924_50a0b8,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+31,2026-08-24T15:12:36.944169+00:00,XAUUSD_20260824T151228_e6f19a,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+32,2026-08-24T15:12:37.571050+00:00,XAUUSD_20260824T151228_e6f19a,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+33,2026-08-24T15:12:37.633802+00:00,XAUUSD_20260824T151228_e6f19a,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+34,2026-08-24T15:14:47.774175+00:00,XAUUSD_20260824T151443_14b9f9,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+35,2026-08-24T15:14:48.499060+00:00,XAUUSD_20260824T151443_14b9f9,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+36,2026-08-24T15:14:48.525626+00:00,XAUUSD_20260824T151443_14b9f9,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+37,2026-08-24T15:27:16.180031+00:00,XAUUSD_20260824T152715_d6f496,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+38,2026-08-24T15:27:17.034133+00:00,XAUUSD_20260824T152715_d6f496,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+39,2026-08-24T15:27:17.057174+00:00,XAUUSD_20260824T152715_d6f496,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+40,2026-08-24T15:36:05.601910+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Sell-Side Liquidity (SSL) cluster between 2330-2340, targeting equal highs.",{}
+41,2026-08-24T15:36:05.617573+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+42,2026-08-24T15:36:17.589884+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+43,2026-08-24T15:36:30.377789+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+44,2026-08-24T15:36:47.587317+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,risk_exec,field.confluence_score,4,{}
+45,2026-08-24T15:36:47.602690+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,risk_exec,field.decision,TRADE,{}
+46,2026-08-24T15:36:47.614995+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+47,2026-08-24T15:36:47.628943+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,risk_exec,decision,TRADE,{}
+48,2026-08-24T15:36:47.641486+00:00,XAUUSD_20260824T153542_86fc9e,XAUUSD,chained,,risk_exec,confluence_score,4,{}
+49,2026-08-24T15:37:18.421448+00:00,XAUUSD_20260824T153713_40ced7,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+50,2026-08-24T15:37:23.148950+00:00,XAUUSD_20260824T153713_40ced7,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+51,2026-08-24T15:37:23.157216+00:00,XAUUSD_20260824T153713_40ced7,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+52,2026-08-24T15:38:06.676202+00:00,EURUSD_X_20260824T153755_3d4542,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING)""}"
+53,2026-08-24T15:38:34.640116+00:00,EURUSD_X_20260824T153755_3d4542,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+54,2026-08-24T15:38:34.648746+00:00,EURUSD_X_20260824T153755_3d4542,EURUSD,chained,,htf_bias,gate.retries,1,{}
+55,2026-08-24T15:43:39.614418+00:00,XAUUSD_20260824T154326_76305e,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+56,2026-08-24T15:43:48.149613+00:00,XAUUSD_20260824T154326_76305e,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+57,2026-08-24T15:43:48.160602+00:00,XAUUSD_20260824T154326_76305e,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+58,2026-08-24T15:51:42.617672+00:00,XAUUSD_20260824T155141_05ac72,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+59,2026-08-24T15:51:42.955457+00:00,XAUUSD_20260824T155141_05ac72,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+60,2026-08-24T15:51:42.973386+00:00,XAUUSD_20260824T155141_05ac72,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+61,2026-08-24T16:54:50.800738+00:00,XAUUSD_20260824T165448_48fb81,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+62,2026-08-24T16:54:51.656909+00:00,XAUUSD_20260824T165448_48fb81,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+63,2026-08-24T16:54:51.699508+00:00,XAUUSD_20260824T165448_48fb81,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+64,2026-08-24T16:57:40.508813+00:00,XAUUSD_20260824T165739_ff0962,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+65,2026-08-24T16:57:40.869091+00:00,XAUUSD_20260824T165739_ff0962,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+66,2026-08-24T16:57:40.901393+00:00,XAUUSD_20260824T165739_ff0962,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+67,2026-08-24T16:59:50.157037+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+68,2026-08-24T17:00:17.269071+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 3398.73 (primary) → 3409–3411 (extension); fallback SSL at 3376–3372 if bullish structure breaks,{}
+69,2026-08-24T17:00:17.290322+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+70,2026-08-24T17:00:17.298923+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+71,2026-08-24T17:01:18.080147+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,timing,field.key_events,UNKNOWN (economic calendar unavailable due to SSL error; no events confirmed).,{}
+72,2026-08-24T17:01:18.089719+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+73,2026-08-24T17:01:39.835999+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,ltf_entry,gate.passed,False,"{""reason"": ""LTF Entry gate failed \u2014 ENTRY_TRIGGER (FVG / Order Block / liquidity sweep), INVALIDATION + TARGET""}"
+74,2026-08-24T17:02:10.976734+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+75,2026-08-24T17:02:10.986937+00:00,XAUUSD_20260824T165923_59d207,XAUUSD,chained,,ltf_entry,gate.retries,1,{}
+76,2026-08-24T17:05:17.841234+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+77,2026-08-24T17:05:27.842574+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Downward pullback to SSL at ~3440.08 (equal lows cluster / equilibrium zone), then targeting BSL above 3458.05",{}
+78,2026-08-24T17:05:27.898066+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+79,2026-08-24T17:05:27.911814+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+80,2026-08-24T17:05:47.528508+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+81,2026-08-24T17:06:10.742542+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,ltf_entry,gate.passed,False,"{""reason"": ""LTF Entry gate failed \u2014 ENTRY_TRIGGER (FVG / Order Block / liquidity sweep), INVALIDATION + TARGET""}"
+82,2026-08-24T17:06:33.471595+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+83,2026-08-24T17:06:33.481533+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,ltf_entry,gate.retries,1,{}
+84,2026-08-24T17:06:57.364826+00:00,XAUUSD_20260824T170458_107f28,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+85,2026-08-24T17:08:43.110284+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Down toward SSL at ~3362–3360 (2-touch equal lows), with deeper target at ~3340; intermediate pull-up to BSL at ~3383 (4-touch equal highs) possible before continuation lower",{}
+86,2026-08-24T17:08:43.140664+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+87,2026-08-24T17:09:08.936150+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+88,2026-08-24T17:09:27.467344+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+89,2026-08-24T17:09:52.009915+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+90,2026-08-24T17:09:52.053038+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,risk_exec,field.decision,WATCH,{}
+91,2026-08-24T17:09:52.060750+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+92,2026-08-24T17:09:52.069468+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,risk_exec,decision,WATCH,{}
+93,2026-08-24T17:09:52.079102+00:00,XAUUSD_20260824T170812_52975f,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+94,2026-08-24T17:11:57.584041+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Upward toward BSL equal highs at ~3349.51, but first may sweep SSL at ~3243.14 for fuel",{}
+95,2026-08-24T17:11:57.594446+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+96,2026-08-24T17:12:12.874069+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,timing,field.key_events,UNKNOWN (economic calendar unavailable due to SSL certificate error; no high-impact USD events confirmed),{}
+97,2026-08-24T17:12:12.887574+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+98,2026-08-24T17:12:36.912309+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,ltf_entry,gate.passed,False,"{""reason"": ""LTF Entry gate failed \u2014 ENTRY_TRIGGER (FVG / Order Block / liquidity sweep), INVALIDATION + TARGET""}"
+99,2026-08-24T17:12:53.883251+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+100,2026-08-24T17:12:53.894307+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,ltf_entry,gate.retries,1,{}
+101,2026-08-24T17:13:26.146366+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,risk_exec,gate.passed,False,"{""reason"": ""Confluence bar not met (score 0/4).""}"
+102,2026-08-24T17:13:54.075679+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+103,2026-08-24T17:13:54.086757+00:00,XAUUSD_20260824T171111_3e3c82,XAUUSD,chained,,risk_exec,gate.retries,1,{}
+104,2026-08-24T17:15:24.450644+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Price drawn toward BSL cluster at ~3371–3372 (equal highs, 4-touch liquidity pool), with secondary target at ~3389 equal-highs; SSL at ~3344–3354 serves as initial retracement support",{}
+105,2026-08-24T17:15:24.468384+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+106,2026-08-24T17:15:35.345865+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+107,2026-08-24T17:15:46.910846+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+108,2026-08-24T17:16:16.686150+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,risk_exec,gate.passed,False,"{""reason"": ""Confluence bar not met (score 0/4).""}"
+109,2026-08-24T17:16:34.170032+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,risk_exec,field.confluence_score,2,{}
+110,2026-08-24T17:16:34.219718+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+111,2026-08-24T17:16:34.228051+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,risk_exec,gate.passed,False,"{""reason"": ""Confluence bar not met (score 2/4).""}"
+112,2026-08-24T17:16:34.236762+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,risk_exec,gate.retries,1,{}
+113,2026-08-24T17:16:34.245842+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+114,2026-08-24T17:16:34.256054+00:00,XAUUSD_20260824T171506_225b2b,XAUUSD,chained,,risk_exec,confluence_score,2,{}
+115,2026-08-25T07:31:57.706303+00:00,XAUUSD_20260825T073059_de86c1,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Down toward SSL cluster at ~3378.20 (4-touch equal lows coinciding with equilibrium 3378.97), then extending toward secondary SSL at ~3367-3372",{}
+116,2026-08-25T07:31:57.726858+00:00,XAUUSD_20260825T073059_de86c1,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+117,2026-08-25T07:32:20.603396+00:00,XAUUSD_20260825T073059_de86c1,XAUUSD,chained,,timing,field.key_events,"UNKNOWN and reduce confidence accordingly. No explicit high-impact USD/EUR/GBP releases are currently flagged in my data, but the uncertainty itself warrants tighter risk management if a trade materializes.",{}
+118,2026-08-25T07:32:20.654132+00:00,XAUUSD_20260825T073059_de86c1,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+119,2026-08-25T07:32:49.096283+00:00,XAUUSD_20260825T073059_de86c1,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+120,2026-08-25T07:33:15.075459+00:00,XAUUSD_20260825T073059_de86c1,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+121,2026-08-25T07:35:54.401891+00:00,XAUUSD_20260825T073525_0ba734,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,Down toward SSL at 3331.16 (7-touch equal lows) → 3317.42 (4-touch equal lows)**,{}
+122,2026-08-25T07:35:54.419991+00:00,XAUUSD_20260825T073525_0ba734,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+123,2026-08-25T07:36:25.651581+00:00,XAUUSD_20260825T073525_0ba734,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+124,2026-08-25T07:36:58.587285+00:00,XAUUSD_20260825T073525_0ba734,XAUUSD,chained,,ltf_entry,gate.passed,False,"{""reason"": ""LTF Entry gate failed \u2014 ENTRY_TRIGGER (FVG / Order Block / liquidity sweep), INVALIDATION + TARGET""}"
+125,2026-08-25T07:37:28.492172+00:00,XAUUSD_20260825T073525_0ba734,XAUUSD,chained,,ltf_entry,gate.passed,False,"{""reason"": ""LTF Entry gate failed \u2014 ENTRY_TRIGGER (FVG / Order Block / liquidity sweep), INVALIDATION + TARGET""}"
+126,2026-08-25T07:37:28.506135+00:00,XAUUSD_20260825T073525_0ba734,XAUUSD,chained,,ltf_entry,gate.retries,1,{}
+127,2026-08-25T07:39:12.521614+00:00,XAUUSD_20260825T073823_06ea48,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Sell-side liquidity at the 5-touch equal low ~3351.84, with secondary target at the previous swing low 3340.05",{}
+128,2026-08-25T07:39:12.540884+00:00,XAUUSD_20260825T073823_06ea48,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+129,2026-08-25T07:39:29.800219+00:00,XAUUSD_20260825T073823_06ea48,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+130,2026-08-25T07:40:05.194455+00:00,XAUUSD_20260825T073823_06ea48,XAUUSD,chained,,ltf_entry,gate.passed,False,"{""reason"": ""LTF Entry gate failed \u2014 ENTRY_TRIGGER (FVG / Order Block / liquidity sweep), INVALIDATION + TARGET""}"
+131,2026-08-25T07:43:39.048632+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Primary draw to SSL at 3390.15–3390.74 (equal lows confluence); secondary draw to deeper SSL pools at 3364.47 and 3338.94. BSL at 3408–3416 represents stop-runs above, not the algorithmic target in this bearish phase.",{}
+132,2026-08-25T07:43:39.062768+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+133,2026-08-25T07:45:26.448008+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+134,2026-08-25T07:45:54.651596+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,ltf_entry,field.draw_on_liquidity,"SSL at 3390.15–3390.74; deeper draws at 3364.47, 3338.94",{}
+135,2026-08-25T07:45:54.661487+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,ltf_entry,field.confluence_score,2,{}
+136,2026-08-25T07:45:54.676464+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,ltf_entry,field.decision,NO_SETUP,{}
+137,2026-08-25T07:45:54.686267+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+138,2026-08-25T07:45:54.697785+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,ltf_entry,decision,NO_SETUP,{}
+139,2026-08-25T07:45:54.706828+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,ltf_entry,confluence_score,2,{}
+140,2026-08-25T07:46:14.649834+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,field.confluence_score,2,{}
+141,2026-08-25T07:46:14.659217+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+142,2026-08-25T07:46:14.667338+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,gate.passed,False,"{""reason"": ""Confluence bar not met (score 2/4).""}"
+143,2026-08-25T07:46:14.678564+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+144,2026-08-25T07:46:14.688129+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,confluence_score,2,{}
+145,2026-08-25T07:46:34.054908+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,field.confluence_score,2,{}
+146,2026-08-25T07:46:34.063465+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+147,2026-08-25T07:46:34.071605+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,gate.passed,False,"{""reason"": ""Confluence bar not met (score 2/4).""}"
+148,2026-08-25T07:46:34.083328+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,gate.retries,1,{}
+149,2026-08-25T07:46:34.098934+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+150,2026-08-25T07:46:34.113746+00:00,XAUUSD_20260825T074312_e73f6a,XAUUSD,chained,,risk_exec,confluence_score,2,{}
+151,2026-08-25T07:56:37.880015+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Price to first draw down toward SSL confluence at 3372–3377 (collect sell-side liquidity / rebalance through equilibrium at 3401.92), then upward draw to BSL above 3432.51",{}
+152,2026-08-25T07:56:37.894634+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,htf_bias,field.key_events,UNKNOWN (economic calendar unavailable — proceed with reduced confidence around timed windows),{}
+153,2026-08-25T07:56:37.903073+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+154,2026-08-25T07:56:49.219515+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+155,2026-08-25T07:57:45.973131+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+156,2026-08-25T07:58:23.296116+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+157,2026-08-25T07:58:23.563412+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,risk_exec,field.decision,WATCH,{}
+158,2026-08-25T07:58:23.727470+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+159,2026-08-25T07:58:23.858314+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,risk_exec,decision,WATCH,{}
+160,2026-08-25T07:58:23.966779+00:00,XAUUSD_20260825T075604_725928,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+161,2026-08-25T08:13:00.712531+00:00,XAUUSD_20260825T081141_766ce9,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+162,2026-08-25T08:13:24.849796+00:00,XAUUSD_20260825T081141_766ce9,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at ~3285.73 (3-touch equal highs) and 3296.62 secondary; SSL at ~3249.60 (2-touch equal lows) as maintenance floor,{}
+163,2026-08-25T08:13:24.861792+00:00,XAUUSD_20260825T081141_766ce9,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+164,2026-08-25T08:13:24.874439+00:00,XAUUSD_20260825T081141_766ce9,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+165,2026-08-25T08:16:58.739336+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Down to SSL at 4617.28 (nearest sell-side liquidity pool / recent swing low), with extension to 4594.52**",{}
+166,2026-08-25T08:16:58.749564+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+167,2026-08-25T08:17:09.732311+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,timing,field.key_events,"UNKNOWN**. No USD/high-impact filtered events can be confirmed at this time. I will proceed cautiously with the assumption that no major news is imminent, but reduce positional sizing if any surprise developments emerge.",{}
+168,2026-08-25T08:17:09.747653+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,timing,gate.passed,False,"{""reason"": ""Timing gate failed: outside kill zones without exceptional justification.""}"
+169,2026-08-25T08:17:53.033353+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,timing,field.key_events,UNKNOWN. Proceed with caution but no known news headwinds.,{}
+170,2026-08-25T08:17:53.043730+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+171,2026-08-25T08:17:53.055676+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,timing,gate.retries,1,{}
+172,2026-08-25T08:18:24.399760+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+173,2026-08-25T08:19:01.631858+00:00,XAUUSD_20260825T081629_4c3ac9,XAUUSD,chained,,risk_exec,gate.passed,False,"{""reason"": ""Confluence bar not met (score 0/4).""}"
+174,2026-08-25T08:50:15.082291+00:00,XAUUSD_20260825T084951_732066,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Primary SSL at 4617.28 (recent swing low), secondary targets at 4594.515 and 4563.57**",{}
+175,2026-08-25T08:50:15.100748+00:00,XAUUSD_20260825T084951_732066,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+176,2026-08-25T08:51:41.118968+00:00,XAUUSD_20260825T084951_732066,XAUUSD,chained,,timing,field.key_events,"UNKNOWN. With no scheduled USD high-impact events visible, I reduce confidence in timed-disruption scenarios. The setup relies purely on structural/liquidity alignment rather than news-driven displacement. This is acceptable but means entries must be more disciplined around LTF confirmation.",{}
+177,2026-08-25T08:51:41.129971+00:00,XAUUSD_20260825T084951_732066,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+178,2026-08-25T08:52:07.860394+00:00,XAUUSD_20260825T084951_732066,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+179,2026-08-25T08:53:54.412376+00:00,XAUUSD_20260825T085325_53d29d,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"SSL at $4,617.28 (primary sweep target), then $4,594.52 (secondary SSL)**",{}
+180,2026-08-25T08:53:54.423996+00:00,XAUUSD_20260825T085325_53d29d,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+181,2026-08-25T08:54:08.929820+00:00,XAUUSD_20260825T085325_53d29d,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+182,2026-08-25T09:07:09.155715+00:00,XAUUSD_20260825T090646_5d6f9e,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4617.28 (nearest sell-side liquidity; secondary draw at 4594.52),{}
+183,2026-08-25T09:07:09.179705+00:00,XAUUSD_20260825T090646_5d6f9e,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+184,2026-08-25T09:07:21.394829+00:00,XAUUSD_20260825T090646_5d6f9e,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+185,2026-08-25T09:07:51.735162+00:00,XAUUSD_20260825T090646_5d6f9e,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+186,2026-08-25T09:21:36.987763+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,Sell-side liquidity pool at 4617.28 (recent swing low); secondary target at 4594.52 if first pool is swept,{}
+187,2026-08-25T09:21:37.000851+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+188,2026-08-25T09:21:45.756099+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,timing,field.key_events,"UNKNOWN**. With no high-impact news events identifiable, we operate purely on the ICT structural model without news-derived volatility expectations. This slightly reduces confidence but does not invalidate the setup.",{}
+189,2026-08-25T09:21:45.763542+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+190,2026-08-25T09:22:09.679587+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+191,2026-08-25T09:24:05.435188+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+192,2026-08-25T09:24:05.444129+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+193,2026-08-25T09:24:05.453176+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+194,2026-08-25T09:24:05.460836+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+195,2026-08-25T09:24:05.468696+00:00,XAUUSD_20260825T092114_e31349,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+196,2026-08-25T09:42:16.465709+00:00,XAUUSD_20260825T094215_fa44d7,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+197,2026-08-25T09:42:16.819424+00:00,XAUUSD_20260825T094215_fa44d7,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+198,2026-08-25T09:42:16.829248+00:00,XAUUSD_20260825T094215_fa44d7,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+199,2026-08-25T09:43:14.476578+00:00,EURUSD_X_20260825T094314_18b449,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+200,2026-08-25T09:43:14.760788+00:00,EURUSD_X_20260825T094314_18b449,EURUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+201,2026-08-25T09:43:14.784283+00:00,EURUSD_X_20260825T094314_18b449,EURUSD,chained,,htf_bias,gate.retries,1,{}
+202,2026-08-25T09:43:15.055011+00:00,GBPUSD_X_20260825T094314_aee6a9,GBPUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+203,2026-08-25T09:43:16.008463+00:00,GBPUSD_X_20260825T094314_aee6a9,GBPUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+204,2026-08-25T09:43:16.030521+00:00,GBPUSD_X_20260825T094314_aee6a9,GBPUSD,chained,,htf_bias,gate.retries,1,{}
+205,2026-08-25T09:52:02.500506+00:00,XAUUSD_20260825T095134_5380b2,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"SSL at 4617.28 (primary), secondary SSL at 4594.52. Price in premium will likely be drawn downward toward these pools.",{}
+206,2026-08-25T09:52:02.513291+00:00,XAUUSD_20260825T095134_5380b2,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+207,2026-08-25T09:52:35.341168+00:00,XAUUSD_20260825T095134_5380b2,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+208,2026-08-25T09:55:43.996630+00:00,EURUSD_X_20260825T095514_f58145,EURUSD,chained,,htf_bias,field.draw_on_liquidity,"Sell-side liquidity pools below — primary target is the equal-low cluster at ~1.16579, followed by the major 3-touch SSL pool at ~1.15709. A preliminary sweep of the 1.16703 equal-low cluster may occur first given its proximity.",{}
+209,2026-08-25T09:55:44.047080+00:00,EURUSD_X_20260825T095514_f58145,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+210,2026-08-25T09:55:58.710030+00:00,EURUSD_X_20260825T095514_f58145,EURUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+211,2026-08-25T09:56:57.022745+00:00,EURUSD_X_20260825T095514_f58145,EURUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+212,2026-08-25T09:57:15.308666+00:00,EURUSD_X_20260825T095514_f58145,EURUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+213,2026-08-25T09:58:18.648288+00:00,GBPUSD_X_20260825T095737_5e452a,GBPUSD,chained,,htf_bias,field.draw_on_liquidity,"Sell-side liquidity at 1.36213 (equal lows cluster, 6 touches) — primary target. Secondary BSL target at 1.36564 if reversal occurs.**",{}
+214,2026-08-25T09:58:18.662326+00:00,GBPUSD_X_20260825T095737_5e452a,GBPUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+215,2026-08-25T09:58:30.488131+00:00,GBPUSD_X_20260825T095737_5e452a,GBPUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+216,2026-08-25T09:59:25.234168+00:00,GBPUSD_X_20260825T095737_5e452a,GBPUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+217,2026-08-25T09:59:42.496540+00:00,GBPUSD_X_20260825T095737_5e452a,GBPUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+218,2026-08-25T10:06:32.312682+00:00,XAUUSD_20260825T100531_04126a,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"SSL at 4617.28 (primary), secondary at 4594.52 / 4563.57**",{}
+219,2026-08-25T10:06:32.329362+00:00,XAUUSD_20260825T100531_04126a,XAUUSD,chained,,htf_bias,field.key_events,"UNKNOWN (calendar unavailable) — without known USD macro events, the timed windows carry reduced confidence. The setup remains valid on structure alone, but execution timing should account for potential surprise volatility.",{}
+220,2026-08-25T10:06:32.337743+00:00,XAUUSD_20260825T100531_04126a,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+221,2026-08-25T10:06:46.232263+00:00,XAUUSD_20260825T100531_04126a,XAUUSD,chained,,timing,field.key_events,"UNKNOWN, but with no scheduled high-impact USD releases, the algorithmic delivery should follow the standard ICT path: sweep SSL → establish discount → target secondary SSL.",{}
+222,2026-08-25T10:06:46.241139+00:00,XAUUSD_20260825T100531_04126a,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+223,2026-08-25T10:07:11.264246+00:00,XAUUSD_20260825T100531_04126a,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+224,2026-08-25T10:23:26.789658+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+225,2026-08-25T10:23:46.486586+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4617.28 (recent swing low) → extension to 4594.52 (secondary SSL),{}
+226,2026-08-25T10:23:46.494105+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+227,2026-08-25T10:23:46.502272+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+228,2026-08-25T10:24:03.772910+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,timing,field.key_events,UNKNOWN. No high-impact USD/GBP/EUR releases can be confirmed at this time.,{}
+229,2026-08-25T10:24:03.817364+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+230,2026-08-25T10:24:40.549284+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+231,2026-08-25T10:24:50.426588+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+232,2026-08-25T10:24:50.467605+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+233,2026-08-25T10:24:50.477177+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+234,2026-08-25T10:24:50.486006+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+235,2026-08-25T10:24:50.494870+00:00,XAUUSD_20260825T102304_36dede,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+236,2026-08-25T10:27:02.403281+00:00,EURUSD_X_20260825T102635_d43298,EURUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 1.16578 (just below current price) and deeper SSL at 1.1571; BSL at 1.1711 is the counter-directional target if price sweeps upward first,{}
+237,2026-08-25T10:27:02.453018+00:00,EURUSD_X_20260825T102635_d43298,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+238,2026-08-25T10:36:21.738570+00:00,XAUUSD_20260825T103620_4e787f,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+239,2026-08-25T10:36:22.003856+00:00,XAUUSD_20260825T103620_4e787f,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+240,2026-08-25T10:36:22.050292+00:00,XAUUSD_20260825T103620_4e787f,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+241,2026-08-25T10:37:23.966512+00:00,XAUUSD_20260825T103723_de7af2,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+242,2026-08-25T10:37:24.260924+00:00,XAUUSD_20260825T103723_de7af2,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+243,2026-08-25T10:37:24.270239+00:00,XAUUSD_20260825T103723_de7af2,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+244,2026-08-25T10:43:47.311260+00:00,XAUUSD_20260825T104325_aa52c8,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4617.28 (→ 4625.225 → 4628.895 as intermediate stops → 4594.515 → 4563.57 deep draw),{}
+245,2026-08-25T10:43:47.324344+00:00,XAUUSD_20260825T104325_aa52c8,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+246,2026-08-25T10:44:04.184738+00:00,XAUUSD_20260825T104325_aa52c8,XAUUSD,chained,,timing,field.key_events,UNKNOWN.,{}
+247,2026-08-25T10:44:04.194330+00:00,XAUUSD_20260825T104325_aa52c8,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+248,2026-08-25T10:49:05.088967+00:00,XAUUSD_20260825T104840_734ce0,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4617.28 (retail sell-side stop cluster beneath recent swing low),{}
+249,2026-08-25T10:49:05.106518+00:00,XAUUSD_20260825T104840_734ce0,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+250,2026-08-25T10:49:26.882158+00:00,XAUUSD_20260825T104840_734ce0,XAUUSD,chained,,timing,field.key_events,"UNKNOWN** — no scheduled news-driven volatility expected, reducing the chance of algorithmic displacement from fundamental triggers.",{}
+251,2026-08-25T10:49:26.894644+00:00,XAUUSD_20260825T104840_734ce0,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+252,2026-08-25T10:49:31.836073+00:00,XAUUSD_20260825T104840_734ce0,XAUUSD,chained,,ltf_entry,gate.passed,False,"{""reason"": ""LTF Entry gate failed \u2014 ENTRY_TRIGGER (FVG / Order Block / liquidity sweep), INVALIDATION + TARGET""}"
+253,2026-08-25T10:50:06.073442+00:00,XAUUSD_20260825T104840_734ce0,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+254,2026-08-25T10:50:06.083004+00:00,XAUUSD_20260825T104840_734ce0,XAUUSD,chained,,ltf_entry,gate.retries,1,{}
+255,2026-08-25T10:57:35.978462+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,DOWN to SSL at 4617.28 (sweep of recent swing low),{}
+256,2026-08-25T10:57:36.003274+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+257,2026-08-25T10:58:01.346995+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+258,2026-08-25T10:58:23.994762+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+259,2026-08-25T10:58:30.368530+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+260,2026-08-25T10:58:30.398555+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+261,2026-08-25T10:58:30.412636+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+262,2026-08-25T10:58:30.427932+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+263,2026-08-25T10:58:30.440445+00:00,XAUUSD_20260825T105648_199297,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+264,2026-08-25T11:07:30.941477+00:00,XAUUSD_20260825T110730_8cffa4,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+265,2026-08-25T11:07:34.892866+00:00,XAUUSD_20260825T110730_8cffa4,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+266,2026-08-25T11:07:34.904590+00:00,XAUUSD_20260825T110730_8cffa4,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+267,2026-08-25T11:11:34.622042+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+268,2026-08-25T11:11:42.001281+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4617.28 (recent swing low with clustered liquidity),{}
+269,2026-08-25T11:11:42.011441+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+270,2026-08-25T11:11:42.019948+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+271,2026-08-25T11:12:02.426150+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,timing,field.key_events,"UNKNOWN.** No high-impact USD/EUR releases have been confirmed for today. This reduces our confidence in any intraday swing — without known catalysts, liquidity grabs tend to be shallower and less decisive.",{}
+272,2026-08-25T11:12:02.442235+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+273,2026-08-25T11:12:30.060685+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+274,2026-08-25T11:13:16.460580+00:00,XAUUSD_20260825T111116_2ae684,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+275,2026-08-25T11:13:57.355383+00:00,EURUSD_X_20260825T111333_accbf6,EURUSD,chained,,htf_bias,field.draw_on_liquidity,"Sell-side liquidity cluster at 1.1571 (major equal lows), with intermediate target at recent low 1.16511 / SSL cluster 1.165785. Price in discount favors continuation lower to raid stop orders.",{}
+276,2026-08-25T11:13:57.363873+00:00,EURUSD_X_20260825T111333_accbf6,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+277,2026-08-25T11:14:15.361427+00:00,EURUSD_X_20260825T111333_accbf6,EURUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+278,2026-08-25T11:15:02.303270+00:00,EURUSD_X_20260825T111333_accbf6,EURUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+279,2026-08-25T11:15:21.101821+00:00,EURUSD_X_20260825T111333_accbf6,EURUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+280,2026-08-25T11:15:21.111931+00:00,EURUSD_X_20260825T111333_accbf6,EURUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+281,2026-08-25T11:15:21.121029+00:00,EURUSD_X_20260825T111333_accbf6,EURUSD,chained,,risk_exec,decision,NO_SETUP,{}
+282,2026-08-25T11:16:43.557404+00:00,XAUUSD_20260825T111624_b123fe,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4617.28 (recent swing low) and 4594.515 (structural low); also BSL at 4653.43 if retracement develops,{}
+283,2026-08-25T11:16:43.575824+00:00,XAUUSD_20260825T111624_b123fe,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+284,2026-08-25T11:16:57.312548+00:00,XAUUSD_20260825T111624_b123fe,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+285,2026-08-25T11:19:25.520119+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,htf_bias,field.draw_on_liquidity,Primary target is SSL cluster at 1.36213 (6-touch equal lows). Secondary target extends deeper toward 1.35921 cluster if momentum continues. BSL at 1.36564 (4-touch equal highs) represents opposite-direction liquidity.,{}
+286,2026-08-25T11:19:25.528821+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+287,2026-08-25T11:19:39.320826+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,timing,field.key_events,UNKNOWN,{}
+288,2026-08-25T11:19:39.375937+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+289,2026-08-25T11:20:09.293554+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+290,2026-08-25T11:20:23.692463+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,risk_exec,field.confluence_score,3,{}
+291,2026-08-25T11:20:23.703831+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,risk_exec,field.decision,WATCH,{}
+292,2026-08-25T11:20:23.715339+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+293,2026-08-25T11:20:23.726084+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,risk_exec,decision,WATCH,{}
+294,2026-08-25T11:20:23.735515+00:00,GBPUSD_X_20260825T111850_81d60a,GBPUSD,chained,,risk_exec,confluence_score,3,{}
+295,2026-08-25T11:22:38.843503+00:00,XAUUSD_20260825T112221_8b99e4,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+296,2026-08-25T11:22:46.508756+00:00,XAUUSD_20260825T112221_8b99e4,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+297,2026-08-25T11:22:46.537812+00:00,XAUUSD_20260825T112221_8b99e4,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+298,2026-08-25T12:07:49.051069+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,Sell-side liquidity at 4617.28 (last swing low pre-CHoCH),{}
+299,2026-08-25T12:07:49.069125+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+300,2026-08-25T12:08:18.157528+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+301,2026-08-25T12:08:58.931644+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+302,2026-08-25T12:09:06.107928+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+303,2026-08-25T12:09:06.125858+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+304,2026-08-25T12:09:06.140363+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+305,2026-08-25T12:09:06.156322+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+306,2026-08-25T12:09:06.169992+00:00,XAUUSD_20260825T120728_1cb206,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+307,2026-08-25T12:12:21.913077+00:00,EURUSD_X_20260825T121128_bbb25b,EURUSD,chained,,htf_bias,field.draw_on_liquidity,"Price drawn toward BSL clusters at 1.1675 (equal highs), 1.1686 (stronger shelf), and ultimate target 1.1711 (Aug 21 swing high external range liquidity)",{}
+308,2026-08-25T12:12:21.927002+00:00,EURUSD_X_20260825T121128_bbb25b,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+309,2026-08-25T12:12:31.363649+00:00,EURUSD_X_20260825T121128_bbb25b,EURUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+310,2026-08-25T12:13:13.977942+00:00,EURUSD_X_20260825T121128_bbb25b,EURUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+311,2026-08-25T12:16:48.824012+00:00,EURUSD_X_20260825T121605_09e015,EURUSD,chained,,htf_bias,field.draw_on_liquidity,Equal-highs cluster at ~1.1675 (3-touch pool) → 1.16856 → 1.17110,{}
+312,2026-08-25T12:16:48.834638+00:00,EURUSD_X_20260825T121605_09e015,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+313,2026-08-25T12:33:44.739050+00:00,XAUUSD_20260825T122945_7dc13a,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"Sell-side liquidity at 4617.28 (recent swing low), with deeper target at 4594.52",{}
+314,2026-08-25T12:33:44.751668+00:00,XAUUSD_20260825T122945_7dc13a,XAUUSD,chained,,htf_bias,field.key_events,UNKNOWN (calendar unavailable — SSL certificate error). Proceed with caution on timing windows.,{}
+315,2026-08-25T12:33:44.759919+00:00,XAUUSD_20260825T122945_7dc13a,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+316,2026-08-25T12:34:16.697418+00:00,XAUUSD_20260825T122945_7dc13a,XAUUSD,chained,,timing,field.key_events,"UNKNOWN (calendar unavailable). No major USD/EUR/GBP high-impact events flagged, but certificate errors prevent full verification.",{}
+317,2026-08-25T12:34:16.708983+00:00,XAUUSD_20260825T122945_7dc13a,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+318,2026-08-25T12:34:41.987080+00:00,XAUUSD_20260825T122945_7dc13a,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+319,2026-08-25T12:35:06.198223+00:00,XAUUSD_20260825T122945_7dc13a,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+320,2026-08-25T12:45:47.497536+00:00,XAUUSD_20260825T124524_19d367,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4617.28,{}
+321,2026-08-25T12:45:47.517302+00:00,XAUUSD_20260825T124524_19d367,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+322,2026-08-25T12:46:04.670190+00:00,XAUUSD_20260825T124524_19d367,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+323,2026-08-25T12:46:34.377377+00:00,XAUUSD_20260825T124524_19d367,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+324,2026-08-25T12:47:16.026031+00:00,XAUUSD_20260825T124524_19d367,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+325,2026-08-25T12:59:27.132466+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 1.36564 (4-touch equal highs cluster),{}
+326,2026-08-25T12:59:27.147016+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+327,2026-08-25T12:59:52.732803+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+328,2026-08-25T13:00:20.626029+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+329,2026-08-25T13:00:40.840268+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,risk_exec,field.draw_on_liquidity,BSL at 1.36564,{}
+330,2026-08-25T13:00:40.849382+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,risk_exec,field.confluence_score,3,{}
+331,2026-08-25T13:00:40.859875+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+332,2026-08-25T13:00:40.869485+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+333,2026-08-25T13:00:40.879838+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,risk_exec,decision,NO_SETUP,{}
+334,2026-08-25T13:00:40.888447+00:00,GBPUSD_X_20260825T125902_a4b7ab,GBPUSD,chained,,risk_exec,confluence_score,3,{}
+335,2026-08-25T13:34:28.123944+00:00,EURUSD_X_20260825T133339_f4b793,EURUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 1.17116 (with intermediate target at 1.16856 equal highs),{}
+336,2026-08-25T13:34:28.141830+00:00,EURUSD_X_20260825T133339_f4b793,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+337,2026-08-25T13:34:52.810338+00:00,EURUSD_X_20260825T133339_f4b793,EURUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+338,2026-08-25T13:35:24.780737+00:00,EURUSD_X_20260825T133339_f4b793,EURUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+339,2026-08-25T13:35:46.720682+00:00,EURUSD_X_20260825T133339_f4b793,EURUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+340,2026-08-25T13:36:45.982538+00:00,DXY_20260825T133556_e8bb63,DXY,chained,,htf_bias,field.draw_on_liquidity,BSL at 12618.075 (equal highs cluster with 8 touches); secondary SSL at 12600.59,{}
+341,2026-08-25T13:36:45.998473+00:00,DXY_20260825T133556_e8bb63,DXY,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+342,2026-08-25T13:37:14.207171+00:00,DXY_20260825T133556_e8bb63,DXY,chained,,timing,field.key_events,UNKNOWN — this means we reduce confidence in event-driven breakouts and rely on pure price action / ICT structure.,{}
+343,2026-08-25T13:37:14.215954+00:00,DXY_20260825T133556_e8bb63,DXY,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+344,2026-08-25T13:37:45.845914+00:00,DXY_20260825T133556_e8bb63,DXY,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+345,2026-08-25T13:38:12.201105+00:00,DXY_20260825T133556_e8bb63,DXY,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 4/4). Trade decision is allowed.""}"
+346,2026-08-25T13:39:00.046801+00:00,NAS100_20260825T133823_b79dee,NAS100,chained,,htf_bias,field.draw_on_liquidity,BSL at 29453.6–29596.5 (primary); secondary SSL at 29146.05 given premium + CHoCH,{}
+347,2026-08-25T13:39:00.071603+00:00,NAS100_20260825T133823_b79dee,NAS100,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+348,2026-08-25T13:39:20.696382+00:00,NAS100_20260825T133823_b79dee,NAS100,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+349,2026-08-25T13:39:55.954180+00:00,NAS100_20260825T133823_b79dee,NAS100,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+350,2026-08-25T13:40:19.356133+00:00,NAS100_20260825T133823_b79dee,NAS100,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+351,2026-08-26T14:38:34.218680+00:00,XAUUSD_20260826T143746_23f121,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 4659.805-4673.765 (equal highs cluster and recent swing high containing sell-side stop liquidity),{}
+352,2026-08-26T14:38:36.472477+00:00,XAUUSD_20260826T143746_23f121,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+353,2026-08-26T14:39:05.259603+00:00,XAUUSD_20260826T143746_23f121,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+354,2026-08-26T14:39:34.225490+00:00,XAUUSD_20260826T143746_23f121,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+355,2026-08-26T14:44:46.408578+00:00,XAUUSD_20260826T144348_84e738,XAUUSD,chained,,htf_bias,field.decision,WATCH,{}
+356,2026-08-26T14:44:46.422892+00:00,XAUUSD_20260826T144348_84e738,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+357,2026-08-26T14:44:46.435011+00:00,XAUUSD_20260826T144348_84e738,XAUUSD,chained,,htf_bias,decision,WATCH,{}
+358,2026-08-26T14:45:08.821676+00:00,XAUUSD_20260826T144348_84e738,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+359,2026-08-26T14:45:39.050330+00:00,XAUUSD_20260826T144348_84e738,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+360,2026-08-26T14:46:05.511272+00:00,XAUUSD_20260826T144348_84e738,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+361,2026-08-26T14:52:11.386847+00:00,XAUUSD_20260826T145131_78283a,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 4659.805–4673.765,{}
+362,2026-08-26T14:52:11.397415+00:00,XAUUSD_20260826T145131_78283a,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+363,2026-08-26T14:52:22.104087+00:00,XAUUSD_20260826T145131_78283a,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+364,2026-08-26T14:53:02.677440+00:00,XAUUSD_20260826T145131_78283a,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+365,2026-08-26T14:57:02.703229+00:00,EURUSD_X_20260826T145617_3312f2,EURUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 1.16837-1.1711,{}
+366,2026-08-26T14:57:02.724782+00:00,EURUSD_X_20260826T145617_3312f2,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+367,2026-08-26T14:57:24.215713+00:00,EURUSD_X_20260826T145617_3312f2,EURUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+368,2026-08-26T15:05:20.382816+00:00,EURUSD_X_20260826T150420_10f72c,EURUSD,chained,,htf_bias,field.draw_on_liquidity,"BSL at 1.16746 (6-touch EQH cluster), extending to 1.1684 and 1.1711",{}
+369,2026-08-26T15:05:20.406637+00:00,EURUSD_X_20260826T150420_10f72c,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+370,2026-08-26T15:05:46.073427+00:00,EURUSD_X_20260826T150420_10f72c,EURUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+371,2026-08-26T15:07:35.653403+00:00,EURUSD_X_20260826T150420_10f72c,EURUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+372,2026-08-26T15:08:18.251882+00:00,EURUSD_X_20260826T150420_10f72c,EURUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+373,2026-08-26T15:12:08.717552+00:00,EURUSD_X_20260826T151033_3a6794,EURUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 1.16746 (6-touch equal highs),{}
+374,2026-08-26T15:12:08.769306+00:00,EURUSD_X_20260826T151033_3a6794,EURUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+375,2026-08-26T15:12:51.407940+00:00,EURUSD_X_20260826T151033_3a6794,EURUSD,chained,,timing,field.key_events,** UNKNOWN (calendar unavailable due to SSL error),{}
+376,2026-08-26T15:12:51.707219+00:00,EURUSD_X_20260826T151033_3a6794,EURUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+377,2026-08-28T12:44:32.079786+00:00,XAUUSD_20260828T124430_fa7cc5,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+378,2026-08-28T12:44:32.460412+00:00,XAUUSD_20260828T124430_fa7cc5,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+379,2026-08-28T12:44:32.467562+00:00,XAUUSD_20260828T124430_fa7cc5,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+380,2026-08-28T12:53:24.704626+00:00,XAUUSD_from_video_2026_08_15_20260828T125323_fb3a1f,XAUUSD,from_video_2026_08_15,,06_multi_instrument,gate.passed,False,"{""reason"": ""Missing required fields: EXECUTABLE_INSTRUMENT, CONTINUOUS_REFERENCE, LEVEL_MAPPING_NOTES, SESSION_CLOCK, TRANSPOSITION_CONFIDENCE""}"
+381,2026-08-28T12:53:25.055169+00:00,XAUUSD_from_video_2026_08_15_20260828T125323_fb3a1f,XAUUSD,from_video_2026_08_15,,06_multi_instrument,gate.passed,False,"{""reason"": ""Missing required fields: EXECUTABLE_INSTRUMENT, CONTINUOUS_REFERENCE, LEVEL_MAPPING_NOTES, SESSION_CLOCK, TRANSPOSITION_CONFIDENCE""}"
+382,2026-08-28T12:53:25.063945+00:00,XAUUSD_from_video_2026_08_15_20260828T125323_fb3a1f,XAUUSD,from_video_2026_08_15,,06_multi_instrument,gate.retries,1,{}
+383,2026-08-28T13:27:31.232693+00:00,XAUUSD_20260828T132730_fc5edd,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+384,2026-08-28T13:27:31.678768+00:00,XAUUSD_20260828T132730_fc5edd,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+385,2026-08-28T13:27:31.688504+00:00,XAUUSD_20260828T132730_fc5edd,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+386,2026-08-28T14:20:13.326564+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+387,2026-08-28T14:21:34.285722+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"BSL at 1.3590 (equal highs cluster, 14 touches)",{}
+388,2026-08-28T14:21:34.293755+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+389,2026-08-28T14:21:34.300958+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+390,2026-08-28T14:22:21.444566+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+391,2026-08-28T14:23:12.789300+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+392,2026-08-28T14:23:35.448256+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+393,2026-08-28T14:23:35.456624+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+394,2026-08-28T14:23:35.464317+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+395,2026-08-28T14:23:35.472309+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+396,2026-08-28T14:23:35.480141+00:00,XAUUSD_20260828T141937_c3cfa5,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+397,2026-08-31T07:26:15.484367+00:00,XAUUSD_20260831T072611_0f0b18,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+398,2026-08-31T07:26:16.331076+00:00,XAUUSD_20260831T072611_0f0b18,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+399,2026-08-31T07:26:16.343655+00:00,XAUUSD_20260831T072611_0f0b18,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+400,2026-08-31T07:34:48.404543+00:00,XAUUSD_20260831T073417_411d5f,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+401,2026-08-31T07:35:06.321355+00:00,XAUUSD_20260831T073417_411d5f,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+402,2026-08-31T07:35:06.358301+00:00,XAUUSD_20260831T073417_411d5f,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+403,2026-08-31T07:41:40.631405+00:00,XAUUSD_20260831T074050_1344e4,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+404,2026-08-31T07:42:36.702226+00:00,XAUUSD_20260831T074050_1344e4,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+405,2026-08-31T07:42:36.715905+00:00,XAUUSD_20260831T074050_1344e4,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+406,2026-08-31T07:48:26.851232+00:00,XAUUSD_from_video_2026_08_15_20260831T074759_9c359a,XAUUSD,from_video_2026_08_15,2026-08-25,06_multi_instrument,gate.passed,False,"{""reason"": ""Missing required fields: EXECUTABLE_INSTRUMENT, CONTINUOUS_REFERENCE, LEVEL_MAPPING_NOTES, SESSION_CLOCK, TRANSPOSITION_CONFIDENCE""}"
+407,2026-08-31T07:48:59.124155+00:00,XAUUSD_from_video_2026_08_15_20260831T074759_9c359a,XAUUSD,from_video_2026_08_15,2026-08-25,06_multi_instrument,gate.passed,False,"{""reason"": ""Missing required fields: EXECUTABLE_INSTRUMENT, CONTINUOUS_REFERENCE, LEVEL_MAPPING_NOTES, SESSION_CLOCK, TRANSPOSITION_CONFIDENCE""}"
+408,2026-08-31T07:48:59.140294+00:00,XAUUSD_from_video_2026_08_15_20260831T074759_9c359a,XAUUSD,from_video_2026_08_15,2026-08-25,06_multi_instrument,gate.retries,1,{}
+409,2026-08-31T07:58:25.301480+00:00,XAUUSD_20260831T075756_9d399b,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+410,2026-08-31T08:06:52.423065+00:00,XAUUSD_20260831T080530_318c74,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,"SSL at 4617.28 (equal-low cluster below current price, targeting further downside sweep)",{}
+411,2026-08-31T08:06:52.446436+00:00,XAUUSD_20260831T080530_318c74,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+412,2026-08-31T08:07:20.433377+00:00,XAUUSD_20260831T080530_318c74,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+413,2026-08-31T08:09:35.457990+00:00,XAUUSD_20260831T080845_074a9b,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4584.19,{}
+414,2026-08-31T08:09:35.479355+00:00,XAUUSD_20260831T080845_074a9b,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+415,2026-08-31T08:09:41.841546+00:00,XAUUSD_20260831T080845_074a9b,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+416,2026-08-31T08:13:51.565891+00:00,XAUUSD_20260831T081216_aeba88,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+417,2026-08-31T08:14:28.041903+00:00,XAUUSD_20260831T081216_aeba88,XAUUSD,chained,,htf_bias,gate.passed,False,"{""reason"": ""HTF Bias gate failed \u2014 missing: BIAS (BULLISH / BEARISH / RANGING), DRAW_ON_LIQUIDITY (BSL/SSL or equal highs/lows), PD_ARRAY (PREMIUM / DISCOUNT / EQUILIBRIUM)""}"
+418,2026-08-31T08:14:28.056978+00:00,XAUUSD_20260831T081216_aeba88,XAUUSD,chained,,htf_bias,gate.retries,1,{}
+419,2026-08-31T08:19:40.284562+00:00,XAUUSD_20260831T081844_9316f0,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,BSL at 4643.21 (primary) and equal-highs resonance at 4631â€“4633; secondary draw on SSL at 4396.525 if price retests,{}
+420,2026-08-31T08:19:40.631025+00:00,XAUUSD_20260831T081844_9316f0,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+421,2026-08-31T08:24:22.796471+00:00,XAUUSD_20260831T082306_efc98f,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4584.19,{}
+422,2026-08-31T08:24:23.172614+00:00,XAUUSD_20260831T082306_efc98f,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+423,2026-08-31T08:25:38.873644+00:00,XAUUSD_20260831T082306_efc98f,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+424,2026-08-31T08:27:59.018167+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4584.19,{}
+425,2026-08-31T08:27:59.043886+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+426,2026-08-31T08:28:14.714060+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+427,2026-08-31T08:28:50.651329+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,ltf_entry,field.confluence_score,3,{}
+428,2026-08-31T08:28:50.916747+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,ltf_entry,field.decision,WATCH,{}
+429,2026-08-31T08:28:51.144975+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+430,2026-08-31T08:28:51.357386+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,ltf_entry,decision,WATCH,{}
+431,2026-08-31T08:28:51.586955+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,ltf_entry,confluence_score,3,{}
+432,2026-08-31T08:29:21.901994+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+433,2026-08-31T08:29:21.913038+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+434,2026-08-31T08:29:21.924383+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+435,2026-08-31T08:29:21.934947+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+436,2026-08-31T08:29:21.943630+00:00,XAUUSD_20260831T082717_880bbc,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+437,2026-08-31T08:32:19.009911+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4445.55,{}
+438,2026-08-31T08:32:19.030594+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BULLISH. Liquidity and PD array present.""}"
+439,2026-08-31T08:32:49.475432+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+440,2026-08-31T08:33:46.016285+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+441,2026-08-31T08:34:49.104569+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,risk_exec,gate.passed,False,"{""reason"": ""Confluence bar not met (score 0/4).""}"
+442,2026-08-31T08:35:04.865181+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+443,2026-08-31T08:35:04.878365+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+444,2026-08-31T08:35:04.887730+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+445,2026-08-31T08:35:04.899768+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,risk_exec,gate.retries,1,{}
+446,2026-08-31T08:35:04.910762+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+447,2026-08-31T08:35:04.920957+00:00,XAUUSD_20260831T083104_d44dff,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+448,2026-08-31T08:37:20.989700+00:00,XAUUSD_20260831T083611_79a74d,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4584.19,{}
+449,2026-08-31T08:37:21.010024+00:00,XAUUSD_20260831T083611_79a74d,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+450,2026-08-31T08:37:35.338879+00:00,XAUUSD_20260831T083611_79a74d,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+451,2026-08-31T08:47:37.266622+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4584.19,{}
+452,2026-08-31T08:47:37.282562+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+453,2026-08-31T08:48:02.739338+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+454,2026-08-31T08:49:15.222658+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+455,2026-08-31T08:49:41.362274+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+456,2026-08-31T08:49:41.374336+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+457,2026-08-31T08:49:41.384096+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+458,2026-08-31T08:49:41.394317+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+459,2026-08-31T08:49:41.404003+00:00,XAUUSD_20260831T084646_2aa624,XAUUSD,chained,,risk_exec,confluence_score,3,{}
+460,2026-08-31T08:55:30.863629+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,htf_bias,field.draw_on_liquidity,SSL at 4584.19,{}
+461,2026-08-31T08:55:30.895841+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,htf_bias,gate.passed,True,"{""reason"": ""HTF Bias locked: BEARISH. Liquidity and PD array present.""}"
+462,2026-08-31T08:56:08.574831+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,timing,gate.passed,True,"{""reason"": ""Timing gate passed (inside or neutral kill-zone context).""}"
+463,2026-08-31T08:57:15.254970+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,ltf_entry,gate.passed,True,"{""reason"": ""LTF Entry gate passed: trigger + invalidation + target present.""}"
+464,2026-08-31T08:58:33.657491+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,risk_exec,field.confluence_score,3,{}
+465,2026-08-31T08:58:33.760934+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,risk_exec,field.decision,NO_SETUP,{}
+466,2026-08-31T08:58:33.861301+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,risk_exec,gate.passed,True,"{""reason"": ""Confluence bar met (score 3/4). Trade decision is allowed.""}"
+467,2026-08-31T08:58:33.940620+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,risk_exec,decision,NO_SETUP,{}
+468,2026-08-31T08:58:34.026538+00:00,XAUUSD_20260831T085439_3371c1,XAUUSD,chained,,risk_exec,confluence_score,3,{}

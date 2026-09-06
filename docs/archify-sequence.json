@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Chained Analysis \u00e2\u20ac\u201d Message Sequence",
+    "subtitle": "One cycle: CLI \u00e2\u2020\u2019 runtime \u00e2\u2020\u2019 4 staged LLM calls \u00e2\u2020\u2019 tool dispatch \u00e2\u2020\u2019 paper trade",
+    "viewBox": [
+      900,
+      860
+    ],
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "views": [
+      {
+        "id": "main-call-sequence",
+        "label": "Main call sequence",
+        "focus": [
+          "user",
+          "runtime",
+          "adapter",
+          "llm",
+          "kernel",
+          "tools",
+          "store",
+          "alpaca"
+        ],
+        "note": "Follow each LLM call and tool dispatch through the four analysis stages."
+      },
+      {
+        "id": "gate-failure",
+        "label": "Gate failure path",
+        "focus": [
+          "gate",
+          "llm"
+        ],
+        "note": "See how a failed gate injects feedback and loops back to the LLM."
+      }
+    ]
+  },
+  "participants": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "User",
+      "sublabel": "CLI input"
+    },
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "Runtime",
+      "sublabel": "agent/runtime.py"
+    },
+    {
+      "id": "adapter",
+      "type": "backend",
+      "label": "Adapter",
+      "sublabel": "model_adapters.py"
+    },
+    {
+      "id": "llm",
+      "type": "external",
+      "label": "LLM (Claude)",
+      "sublabel": "Anthropic API"
+    },
+    {
+      "id": "kernel",
+      "type": "backend",
+      "label": "Kernel",
+      "sublabel": "harness/kernel.py"
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Tool Plugins",
+      "sublabel": "tools/*.py"
+    },
+    {
+      "id": "gate",
+      "type": "security",
+      "label": "Gate Checker",
+      "sublabel": "agent/gates.py"
+    },
+    {
+      "id": "store",
+      "type": "database",
+      "label": "SQLite",
+      "sublabel": "ict_agent.db"
+    },
+    {
+      "id": "alpaca",
+      "type": "external",
+      "label": "Alpaca",
+      "sublabel": "paper trading"
+    },
+    {
+      "id": "session",
+      "type": "backend",
+      "label": "Session Log",
+      "sublabel": "harness/session_log.py"
+    }
+  ],
+  "segments": [
+    {
+      "from": 100,
+      "to": 200,
+      "label": "Invoke"
+    },
+    {
+      "from": 220,
+      "to": 420,
+      "label": "Analysis stages"
+    },
+    {
+      "from": 440,
+      "to": 620,
+      "label": "Decision"
+    },
+    {
+      "from": 640,
+      "to": 800,
+      "label": "Persist"
+    }
+  ],
+  "messages": [
+    {
+      "from": "user",
+      "to": "runtime",
+      "y": 260,
+      "label": "python main.py SPY",
+      "variant": "emphasis"
+    },
+    {
+      "from": "runtime",
+      "to": "adapter",
+      "y": 300,
+      "label": "build kernel + adapter"
+    },
+    {
+      "from": "adapter",
+      "to": "llm",
+      "y": 180,
+      "label": "call(system, tools, msgs)",
+      "variant": "emphasis"
+    },
+    {
+      "from": "llm",
+      "to": "adapter",
+      "y": 210,
+      "label": "tool_use blocks",
+      "variant": "return"
+    },
+    {
+      "from": "adapter",
+      "to": "kernel",
+      "y": 240,
+      "label": "dispatch tool calls"
+    },
+    {
+      "from": "kernel",
+      "to": "tools",
+      "y": 270,
+      "label": "get_market_structure(symbol)"
+    },
+    {
+      "from": "tools",
+      "to": "store",
+      "y": 300,
+      "label": "read candles + history"
+    },
+    {
+      "from": "store",
+      "to": "tools",
+      "y": 280,
+      "label": "OHLCV + BOS data"
+    },
+    {
+      "from": "tools",
+      "to": "kernel",
+      "y": 310,
+      "label": "result dict"
+    },
+    {
+      "from": "kernel",
+      "to": "gate",
+      "y": 370,
+      "label": "gate_htf_bias(parsed_output)"
+    },
+    {
+      "from": "gate",
+      "to": "llm",
+      "y": 400,
+      "label": "continue (pass) / error (retry)",
+      "variant": "emphasis"
+    },
+    {
+      "from": "llm",
+      "to": "adapter",
+      "y": 430,
+      "label": "next tool_call or text",
+      "variant": "return"
+    },
+    {
+      "from": "adapter",
+      "to": "kernel",
+      "y": 460,
+      "label": "timing \u00e2\u2020\u2019 LTF \u00e2\u2020\u2019 risk stage calls",
+      "variant": "dashed"
+    },
+    {
+      "from": "runtime",
+      "to": "alpaca",
+      "y": 500,
+      "label": "place_paper_trade({symbol, direction, entry, stop, target})",
+      "variant": "security"
+    },
+    {
+      "from": "alpaca",
+      "to": "runtime",
+      "y": 530,
+      "label": "order accepted / rejected",
+      "variant": "return"
+    },
+    {
+      "from": "runtime",
+      "to": "session",
+      "y": 570,
+      "label": "append(stage, gate_result, trade)"
+    },
+    {
+      "from": "session",
+      "to": "runtime",
+      "y": 600,
+      "label": "narrative summary"
+    },
+    {
+      "from": "runtime",
+      "to": "user",
+      "y": 640,
+      "label": "final analysis or trade executed",
+      "variant": "emphasis"
+    },
+    {
+      "from": "gate",
+      "to": "runtime",
+      "y": 430,
+      "label": "FAIL \u00e2\u2020\u2019 inject error into prompt",
+      "variant": "dashed"
+    },
+    {
+      "from": "runtime",
+      "to": "adapter",
+      "y": 460,
+      "label": "retry with feedback",
+      "variant": "dashed"
+    }
+  ],
+  "activations": [
+    {
+      "participant": "runtime",
+      "from": 134,
+      "to": 700,
+      "type": "backend"
+    },
+    {
+      "participant": "adapter",
+      "from": 174,
+      "to": 510,
+      "type": "backend"
+    },
+    {
+      "participant": "llm",
+      "from": 214,
+      "to": 480,
+      "type": "external"
+    },
+    {
+      "participant": "kernel",
+      "from": 274,
+      "to": 504,
+      "type": "backend"
+    },
+    {
+      "participant": "tools",
+      "from": 304,
+      "to": 390,
+      "type": "backend"
+    },
+    {
+      "participant": "store",
+      "from": 334,
+      "to": 366,
+      "type": "database"
+    },
+    {
+      "participant": "gate",
+      "from": 404,
+      "to": 480,
+      "type": "security"
+    },
+    {
+      "participant": "alpaca",
+      "from": 534,
+      "to": 576,
+      "type": "external"
+    },
+    {
+      "participant": "session",
+      "from": 604,
+      "to": 646,
+      "type": "backend"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Staged Loop",
+      "items": [
+        "Each LLM call receives accumulated context from prior stages",
+        "Tools are stage-scoped \u00e2\u20ac\u201d only relevant plugins are mounted per stage",
+        "The adapter abstracts the provider; swap Claude for DeepSeek without touching the loop"
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "Gate Feedback Loop",
+      "items": [
+        "Hard gates (HTF, LTF, Confluence) inject the parse error back into the prompt",
+        "Soft gates (Timing) let the chain continue with a degraded flag",
+        "After GATE_MAX_RETRIES (default 2), the chain hard-stops with a no_setup narrative"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Durable Evidence",
+      "items": [
+        "Every tool call, result, and gate outcome is appended to session_log.jsonl",
+        "The SQLite store holds episodic analyses for exact-match recall",
+        "Semantic embeddings enable get_similar_setups() across past market conditions"
+      ]
+    }
+  ]
+}

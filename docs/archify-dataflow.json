@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "ICT Agent \u00e2\u20ac\u201d Data & Knowledge Flow",
+    "subtitle": "Market data pipeline \u00c2\u00b7 Analysis memory \u00c2\u00b7 Metrics export",
+    "viewBox": [
+      1000,
+      720
+    ],
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "views": [
+      {
+        "id": "market-data-flow",
+        "label": "Market data to analysis",
+        "focus": [
+          "binance",
+          "yfinance",
+          "candle_store",
+          "smc_tools",
+          "sqlite"
+        ],
+        "note": "Follow raw OHLCV from external sources through the candle cache into SMC tool analysis."
+      },
+      {
+        "id": "knowledge-flow",
+        "label": "Knowledge retrieval",
+        "focus": [
+          "embedding_store",
+          "gbrain_index",
+          "query_engine",
+          "smc_tools"
+        ],
+        "note": "See how gbrain-indexed memories are embedded and retrieved to enrich the agent's context."
+      },
+      {
+        "id": "metrics-flow",
+        "label": "Observability",
+        "focus": [
+          "session_log",
+          "metrics_db",
+          "csv_export",
+          "backtest_runner"
+        ],
+        "note": "Trace session logs into metrics computation and CSV export for backtest comparison."
+      }
+    ]
+  },
+  "stages": [
+    {
+      "label": "Sources"
+    },
+    {
+      "label": "Ingestion"
+    },
+    {
+      "label": "Processing"
+    },
+    {
+      "label": "Storage"
+    },
+    {
+      "label": "Consumers"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "binance",
+      "type": "external",
+      "label": "Binance",
+      "sublabel": "direct candles",
+      "stage": 0,
+      "row": 0
+    },
+    {
+      "id": "yfinance",
+      "type": "external",
+      "label": "Yahoo Finance",
+      "sublabel": "fallback candles",
+      "stage": 0,
+      "row": 1
+    },
+    {
+      "id": "candle_store",
+      "type": "messagebus",
+      "label": "Candle Cache",
+      "sublabel": "per-session lookback",
+      "stage": 1,
+      "row": 0
+    },
+    {
+      "id": "economic_calendar",
+      "type": "external",
+      "label": "Econ Calendar",
+      "sublabel": "kill zone awareness",
+      "stage": 1,
+      "row": 1
+    },
+    {
+      "id": "smc_tools",
+      "type": "backend",
+      "label": "SMC Tools",
+      "sublabel": "structure \u00c2\u00b7 liquidity \u00c2\u00b7 FVG \u00c2\u00b7 OB",
+      "stage": 2,
+      "row": 4
+    },
+    {
+      "id": "knowledge_ingest",
+      "type": "backend",
+      "label": "Knowledge Ingest",
+      "sublabel": "chunk + embed",
+      "stage": 2,
+      "row": 1
+    },
+    {
+      "id": "query_engine",
+      "type": "backend",
+      "label": "Query Engine",
+      "sublabel": "search_ict_knowledge",
+      "stage": 2,
+      "row": 2
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": "SQLite Store",
+      "sublabel": "ict_agent.db \u00c2\u00b7 analysis + trades",
+      "stage": 3,
+      "row": 0
+    },
+    {
+      "id": "embedding_store",
+      "type": "database",
+      "label": "Embeddings",
+      "sublabel": "OpenRouter text-embedding-3-small",
+      "stage": 3,
+      "row": 1
+    },
+    {
+      "id": "gbrain_index",
+      "type": "database",
+      "label": "GBrain Index",
+      "sublabel": "~/.claude/projects/*/memory/",
+      "stage": 3,
+      "row": 2
+    },
+    {
+      "id": "session_log",
+      "type": "backend",
+      "label": "Session Log",
+      "sublabel": "jsonl append-only",
+      "stage": 4,
+      "row": 0
+    },
+    {
+      "id": "metrics_db",
+      "type": "database",
+      "label": "Metrics DB",
+      "sublabel": "memory/metrics.py",
+      "stage": 4,
+      "row": 1
+    },
+    {
+      "id": "csv_export",
+      "type": "external",
+      "label": "CSV Export",
+      "sublabel": "metrics_export.csv",
+      "stage": 4,
+      "row": 2
+    },
+    {
+      "id": "backtest_runner",
+      "type": "backend",
+      "label": "Backtest Runner",
+      "sublabel": "sliding-window replay",
+      "stage": 4,
+      "row": 3
+    },
+    {
+      "id": "paper_trade",
+      "type": "external",
+      "label": "Alpaca Paper",
+      "sublabel": "execution API",
+      "stage": 4,
+      "row": 5
+    }
+  ],
+  "flows": [
+    {
+      "from": "binance",
+      "to": "candle_store",
+      "label": "OHLCV 1h/15m",
+      "classification": "primary source",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "from": "yfinance",
+      "to": "candle_store",
+      "label": "OHLCV (fallback)",
+      "classification": "tier 2 source",
+      "variant": "dashed",
+      "route": "straight"
+    },
+    {
+      "from": "candle_store",
+      "to": "smc_tools",
+      "label": "cached candles",
+      "classification": "in-memory cache",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "from": "economic_calendar",
+      "to": "smc_tools",
+      "label": "news events",
+      "classification": "time-aware",
+      "variant": "dashed",
+      "route": "straight"
+    },
+    {
+      "from": "smc_tools",
+      "to": "sqlite",
+      "label": "analysis results",
+      "classification": "episodic memory",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "from": "smc_tools",
+      "to": "paper_trade",
+      "label": "place_paper_trade()",
+      "classification": "side-effect",
+      "variant": "security",
+      "route": "straight"
+    },
+    {
+      "from": "session_log",
+      "to": "csv_export",
+      "label": "metrics dump",
+      "classification": "readonly report",
+      "variant": "default",
+      "route": "straight"
+    },
+    {
+      "from": "session_log",
+      "to": "backtest_runner",
+      "label": "session replay",
+      "classification": "historical run",
+      "variant": "dashed",
+      "route": "straight"
+    },
+    {
+      "from": "sqlite",
+      "to": "knowledge_ingest",
+      "label": "new analyses",
+      "classification": "MAG write",
+      "variant": "dashed",
+      "route": "straight"
+    },
+    {
+      "from": "knowledge_ingest",
+      "to": "embedding_store",
+      "label": "embeddings",
+      "classification": "vector index",
+      "variant": "dashed",
+      "route": "straight"
+    },
+    {
+      "from": "embedding_store",
+      "to": "query_engine",
+      "label": "top-k similar",
+      "classification": "semantic recall",
+      "variant": "default",
+      "route": "straight"
+    },
+    {
+      "from": "query_engine",
+      "to": "smc_tools",
+      "label": "similar setups context",
+      "classification": "context enrichment",
+      "variant": "dashed",
+      "route": "straight"
+    },
+    {
+      "from": "gbrain_index",
+      "to": "query_engine",
+      "label": "curated memories",
+      "classification": "semantic search",
+      "variant": "default",
+      "route": "straight"
+    },
+    {
+      "from": "metrics_db",
+      "to": "session_log",
+      "label": "gate scores",
+      "classification": "per-stage audit",
+      "variant": "default",
+      "route": "straight"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Data Fallback Chain",
+      "items": [
+        "Primary: Binance direct REST for OHLCV",
+        "Fallback: Yahoo Finance via yfinance when Binance is unavailable",
+        "Cached per-session in RunContext._candle_cache to avoid duplicate fetches"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Memory-Augmented Generation",
+      "items": [
+        "Episodic: SQLite stores every analysis_log + trades row for exact recall",
+        "Semantic: MAG embeddings of narratives via OpenRouter text-embedding-3-small",
+        "Before Stage 1 runs, get_similar_setups() fetches K semantically closest past analyses"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Observability Trail",
+      "items": [
+        "SessionLog appends every tool call, result, and gate decision to JSONL",
+        "Memory/metrics.py computes per-stage scores (gate pass rate, confluence hits)",
+        "Exported to CSV for backtest comparison and strategy evaluation over time"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "ICT Agent \u00e2\u20ac\u201d Architecture",
+    "subtitle": "Staged prompt-chain \u00c2\u00b7 Gate-checked \u00c2\u00b7 Paper-trading agent",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "cli",
+      "type": "external",
+      "label": "CLI",
+      "sublabel": "python main.py",
+      "pos": [
+        60,
+        40
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "Agent Runtime",
+      "sublabel": "agent/runtime.py",
+      "pos": [
+        260,
+        40
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "adapter",
+      "type": "backend",
+      "label": "Model Adapter",
+      "sublabel": "harness/model_adapters.py",
+      "pos": [
+        460,
+        40
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "model",
+      "type": "external",
+      "label": "LLM (Claude)",
+      "sublabel": "Anthropic SDK / Node bridge",
+      "pos": [
+        660,
+        40
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "kernel",
+      "type": "backend",
+      "label": "Plugin Kernel",
+      "sublabel": "harness/kernel.py",
+      "pos": [
+        260,
+        120
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Tool Plugins",
+      "sublabel": "tools/*.py \u00c2\u00b7 11 plugins",
+      "pos": [
+        260,
+        200
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "store",
+      "type": "database",
+      "label": "SQLite Store",
+      "sublabel": "ict_agent.db \u00c2\u00b7 episodic + MAG",
+      "pos": [
+        460,
+        280
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "knowledge",
+      "type": "database",
+      "label": "Knowledge Vault",
+      "sublabel": "gbrain + claude memory/",
+      "pos": [
+        660,
+        280
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "session_log",
+      "type": "backend",
+      "label": "Session Log",
+      "sublabel": "harness/session_log.py",
+      "pos": [
+        460,
+        360
+      ],
+      "size": [
+        130,
+        44
+      ]
+    },
+    {
+      "id": "metrics",
+      "type": "backend",
+      "label": "Metrics",
+      "sublabel": "memory/metrics.py \u00e2\u2020\u2019 CSV",
+      "pos": [
+        660,
+        360
+      ],
+      "size": [
+        130,
+        44
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Orchestration",
+      "wraps": [
+        "runtime",
+        "kernel",
+        "tools"
+      ],
+      "pad": 8
+    },
+    {
+      "kind": "region",
+      "label": "LLM Engine",
+      "wraps": [
+        "adapter",
+        "model"
+      ],
+      "pad": 8
+    },
+    {
+      "kind": "region",
+      "label": "Data & Memory",
+      "wraps": [
+        "store",
+        "knowledge",
+        "session_log",
+        "metrics"
+      ],
+      "pad": 8
+    }
+  ],
+  "connections": [
+    {
+      "from": "cli",
+      "to": "runtime",
+      "label": "run cycle",
+      "variant": "emphasis"
+    },
+    {
+      "from": "runtime",
+      "to": "adapter",
+      "label": "call",
+      "variant": "emphasis"
+    },
+    {
+      "from": "adapter",
+      "to": "model",
+      "label": "Anthropic API",
+      "variant": "dashed"
+    },
+    {
+      "from": "runtime",
+      "to": "kernel",
+      "label": "dispatch",
+      "variant": "dashed",
+      "labelAt": [
+        390,
+        110
+      ]
+    },
+    {
+      "from": "kernel",
+      "to": "tools",
+      "label": "11 plugins \u00c2\u00b7 17 tools",
+      "variant": "emphasis",
+      "labelDy": 30
+    },
+    {
+      "from": "tools",
+      "to": "store",
+      "label": "candles \u00b7 logs",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 28,
+      "labelAt": [
+        425,
+        500
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "knowledge",
+      "label": "search_ict_knowledge"
+    },
+    {
+      "from": "store",
+      "to": "session_log",
+      "label": "append every step",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        525,
+        500
+      ]
+    },
+    {
+      "from": "session_log",
+      "to": "metrics",
+      "label": "export CSV"
+    }
+  ]
+}

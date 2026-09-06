@@ -1,0 +1,2061 @@
+{
+  "0000": {
+    "source": "O217xQsEUgI\\video.info.json",
+    "type": "doctrine",
+    "topics": [
+      "ltf_entry",
+      "ote",
+      "liquidity",
+      "silver_bullet",
+      "timing",
+      "risk_exec",
+      "crypto",
+      "bread_and_butter",
+      "pd_array",
+      "bos"
+    ],
+    "tokens": 136286
+  },
+  "0001": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "ote",
+      "liquidity",
+      "timing",
+      "commodities",
+      "indices",
+      "crypto",
+      "forex"
+    ],
+    "tokens": 262
+  },
+  "0002": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "liquidity",
+      "ote",
+      "weekly_narrative",
+      "timing"
+    ],
+    "tokens": 166
+  },
+  "0003": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "crypto",
+      "ltf_entry",
+      "ote",
+      "liquidity",
+      "silver_bullet",
+      "fvg",
+      "ob",
+      "timing",
+      "commodities",
+      "daily_bias"
+    ],
+    "tokens": 215
+  },
+  "0004": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "bread_and_butter",
+      "liquidity"
+    ],
+    "tokens": 125
+  },
+  "0005": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "ltf_entry",
+      "liquidity",
+      "macro_time",
+      "fvg",
+      "timing",
+      "daily_bias",
+      "pd_array"
+    ],
+    "tokens": 162
+  },
+  "0006": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "ote",
+      "timing",
+      "commodities",
+      "indices",
+      "forex",
+      "pd_array"
+    ],
+    "tokens": 144
+  },
+  "0007": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "ote",
+      "pd_array",
+      "liquidity",
+      "timing"
+    ],
+    "tokens": 116
+  },
+  "0008": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "crypto",
+      "liquidity",
+      "macro_time",
+      "weekly_narrative",
+      "fvg",
+      "timing",
+      " Judas",
+      "daily_bias",
+      "pd_array"
+    ],
+    "tokens": 262
+  },
+  "0009": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "ltf_entry",
+      "ote",
+      "liquidity",
+      "timing",
+      "crypto"
+    ],
+    "tokens": 131
+  },
+  "0010": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "crypto",
+      "ltf_entry",
+      "ote",
+      "timing",
+      "daily_bias"
+    ],
+    "tokens": 122
+  },
+  "0011": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "daily_bias",
+      "ltf_entry",
+      "timing"
+    ],
+    "tokens": 51
+  },
+  "0012": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "crypto",
+      "ltf_entry",
+      "liquidity",
+      "silver_bullet",
+      "weekly_narrative",
+      "fvg",
+      "ob",
+      "timing",
+      "commodities",
+      "pd_array",
+      "daily_bias",
+      "ifvg"
+    ],
+    "tokens": 194
+  },
+  "0013": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "crypto",
+      "forex",
+      "indices",
+      "commodities"
+    ],
+    "tokens": 140
+  },
+  "0014": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "crypto",
+      "ote",
+      "weekly_narrative",
+      "timing",
+      "risk_exec",
+      "daily_bias"
+    ],
+    "tokens": 239
+  },
+  "0015": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "crypto",
+      "ltf_entry",
+      "ote",
+      "liquidity",
+      "silver_bullet",
+      "macro_time",
+      "fvg",
+      "timing",
+      "commodities",
+      "indices",
+      "daily_bias",
+      "forex",
+      "ifvg"
+    ],
+    "tokens": 241
+  },
+  "0016": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "doctrine",
+    "topics": [
+      "ltf_entry",
+      "ote",
+      "timing",
+      "commodities",
+      "indices",
+      "crypto",
+      "forex"
+    ],
+    "tokens": 194
+  },
+  "0017": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 40
+  },
+  "0018": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 50
+  },
+  "0019": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote"
+    ],
+    "tokens": 23
+  },
+  "0020": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 30
+  },
+  "0021": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 24
+  },
+  "0022": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "indices",
+      "commodities"
+    ],
+    "tokens": 24
+  },
+  "0023": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto"
+    ],
+    "tokens": 23
+  },
+  "0024": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 31
+  },
+  "0025": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote",
+      "liquidity",
+      "timing"
+    ],
+    "tokens": 38
+  },
+  "0026": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 24
+  },
+  "0027": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 37
+  },
+  "0028": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 24
+  },
+  "0029": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 25
+  },
+  "0030": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 51
+  },
+  "0031": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "liquidity",
+      "weekly_narrative",
+      "timing"
+    ],
+    "tokens": 48
+  },
+  "0032": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote"
+    ],
+    "tokens": 28
+  },
+  "0033": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 26
+  },
+  "0034": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 40
+  },
+  "0035": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "daily_bias"
+    ],
+    "tokens": 34
+  },
+  "0036": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "liquidity"
+    ],
+    "tokens": 30
+  },
+  "0037": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote",
+      "timing"
+    ],
+    "tokens": 22
+  },
+  "0038": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry",
+      "silver_bullet",
+      "fvg",
+      "ob",
+      "timing",
+      "commodities"
+    ],
+    "tokens": 36
+  },
+  "0039": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "daily_bias",
+      "liquidity"
+    ],
+    "tokens": 48
+  },
+  "0040": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "bread_and_butter",
+      "liquidity"
+    ],
+    "tokens": 24
+  },
+  "0041": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 24
+  },
+  "0042": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "liquidity"
+    ],
+    "tokens": 74
+  },
+  "0043": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "pd_array",
+      "liquidity",
+      "timing"
+    ],
+    "tokens": 38
+  },
+  "0044": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "macro_time",
+      "fvg"
+    ],
+    "tokens": 35
+  },
+  "0045": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "fvg"
+    ],
+    "tokens": 24
+  },
+  "0046": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "daily_bias"
+    ],
+    "tokens": 26
+  },
+  "0047": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry",
+      "pd_array"
+    ],
+    "tokens": 34
+  },
+  "0048": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "indices",
+      "pd_array",
+      "timing"
+    ],
+    "tokens": 40
+  },
+  "0049": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote",
+      "timing"
+    ],
+    "tokens": 26
+  },
+  "0050": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "commodities",
+      "timing"
+    ],
+    "tokens": 27
+  },
+  "0051": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "indices",
+      "timing"
+    ],
+    "tokens": 47
+  },
+  "0052": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote",
+      "pd_array",
+      "liquidity",
+      "timing"
+    ],
+    "tokens": 74
+  },
+  "0053": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote"
+    ],
+    "tokens": 40
+  },
+  "0054": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 34
+  },
+  "0055": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "liquidity",
+      "macro_time",
+      "fvg",
+      "weekly_narrative",
+      "timing",
+      " Judas",
+      "crypto",
+      "pd_array"
+    ],
+    "tokens": 158
+  },
+  "0056": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "liquidity",
+      "timing"
+    ],
+    "tokens": 42
+  },
+  "0057": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "daily_bias",
+      "liquidity"
+    ],
+    "tokens": 28
+  },
+  "0058": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "ltf_entry",
+      "ote",
+      "liquidity",
+      "timing",
+      "daily_bias"
+    ],
+    "tokens": 315
+  },
+  "0059": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "pd_array"
+    ],
+    "tokens": 20
+  },
+  "0060": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "liquidity",
+      "weekly_narrative",
+      "timing"
+    ],
+    "tokens": 43
+  },
+  "0061": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry",
+      "liquidity",
+      "silver_bullet",
+      "fvg",
+      "ob",
+      "commodities",
+      "daily_bias",
+      "ifvg"
+    ],
+    "tokens": 38
+  },
+  "0062": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "pd_array"
+    ],
+    "tokens": 32
+  },
+  "0063": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "pd_array"
+    ],
+    "tokens": 38
+  },
+  "0064": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 21
+  },
+  "0065": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "forex"
+    ],
+    "tokens": 24
+  },
+  "0066": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "commodities"
+    ],
+    "tokens": 43
+  },
+  "0067": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 20
+  },
+  "0068": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "indices"
+    ],
+    "tokens": 47
+  },
+  "0069": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "ote",
+      "weekly_narrative",
+      "timing",
+      "risk_exec",
+      "daily_bias"
+    ],
+    "tokens": 242
+  },
+  "0070": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 29
+  },
+  "0071": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 28
+  },
+  "0072": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "liquidity"
+    ],
+    "tokens": 22
+  },
+  "0073": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "macro_time",
+      "liquidity"
+    ],
+    "tokens": 32
+  },
+  "0074": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 21
+  },
+  "0075": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "daily_bias",
+      "ltf_entry"
+    ],
+    "tokens": 24
+  },
+  "0076": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "indices",
+      "commodities",
+      "timing"
+    ],
+    "tokens": 34
+  },
+  "0077": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry",
+      "ote",
+      "silver_bullet",
+      "fvg",
+      "commodities",
+      "ifvg"
+    ],
+    "tokens": 40
+  },
+  "0078": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 37
+  },
+  "0079": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "ltf_entry"
+    ],
+    "tokens": 27
+  },
+  "0080": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 32
+  },
+  "0081": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 24
+  },
+  "0082": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "indices",
+      "commodities",
+      "timing"
+    ],
+    "tokens": 34
+  },
+  "0083": {
+    "source": "archive\\ICT_WEEKLY_DAILY_WORKFLOW_v4_identity.md",
+    "type": "claim",
+    "topics": [
+      "ote"
+    ],
+    "tokens": 35
+  },
+  "0084": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 41
+  },
+  "0085": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 46
+  },
+  "0086": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 82
+  },
+  "0087": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 27
+  },
+  "0088": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0089": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 71
+  },
+  "0090": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 78
+  },
+  "0091": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 31
+  },
+  "0092": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 89
+  },
+  "0093": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0094": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 39
+  },
+  "0095": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 39
+  },
+  "0096": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 31
+  },
+  "0097": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 126
+  },
+  "0098": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "indices",
+      "commodities"
+    ],
+    "tokens": 48
+  },
+  "0099": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0100": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex"
+    ],
+    "tokens": 28
+  },
+  "0101": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 25
+  },
+  "0102": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 23
+  },
+  "0103": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 37
+  },
+  "0104": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 34
+  },
+  "0105": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 54
+  },
+  "0106": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 21
+  },
+  "0107": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "indices",
+      "commodities",
+      "timing"
+    ],
+    "tokens": 178
+  },
+  "0108": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 30
+  },
+  "0109": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 25
+  },
+  "0110": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 51
+  },
+  "0111": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 39
+  },
+  "0112": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 27
+  },
+  "0113": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 24
+  },
+  "0114": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 20
+  },
+  "0115": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 49
+  },
+  "0116": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 38
+  },
+  "0117": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 39
+  },
+  "0118": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "timing"
+    ],
+    "tokens": 25
+  },
+  "0119": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 42
+  },
+  "0120": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 78
+  },
+  "0121": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 38
+  },
+  "0122": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 26
+  },
+  "0123": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 25
+  },
+  "0124": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 26
+  },
+  "0125": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 26
+  },
+  "0126": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 43
+  },
+  "0127": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 48
+  },
+  "0128": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 27
+  },
+  "0129": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 29
+  },
+  "0130": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 33
+  },
+  "0131": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 29
+  },
+  "0132": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 33
+  },
+  "0133": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 72
+  },
+  "0134": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 32
+  },
+  "0135": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 20
+  },
+  "0136": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 29
+  },
+  "0137": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 44
+  },
+  "0138": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 28
+  },
+  "0139": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 21
+  },
+  "0140": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 30
+  },
+  "0141": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 27
+  },
+  "0142": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 25
+  },
+  "0143": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 25
+  },
+  "0144": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex"
+    ],
+    "tokens": 25
+  },
+  "0145": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 49
+  },
+  "0146": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 25
+  },
+  "0147": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 43
+  },
+  "0148": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 32
+  },
+  "0149": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 33
+  },
+  "0150": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 32
+  },
+  "0151": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 32
+  },
+  "0152": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 28
+  },
+  "0153": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 36
+  },
+  "0154": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 40
+  },
+  "0155": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 53
+  },
+  "0156": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 28
+  },
+  "0157": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 59
+  },
+  "0158": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 54
+  },
+  "0159": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 23
+  },
+  "0160": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 22
+  },
+  "0161": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 36
+  },
+  "0162": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "liquidity"
+    ],
+    "tokens": 48
+  },
+  "0163": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "liquidity"
+    ],
+    "tokens": 36
+  },
+  "0164": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 30
+  },
+  "0165": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 35
+  },
+  "0166": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 28
+  },
+  "0167": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 30
+  },
+  "0168": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "indices"
+    ],
+    "tokens": 36
+  },
+  "0169": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "forex",
+      "timing"
+    ],
+    "tokens": 40
+  },
+  "0170": {
+    "source": "06 - Tools\\forex-market-hours-live-tool-time-zone-converter-gmtest.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 39
+  },
+  "0171": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 33
+  },
+  "0172": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 36
+  },
+  "0173": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "macro_time",
+      "bread_and_butter"
+    ],
+    "tokens": 31
+  },
+  "0174": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec"
+    ],
+    "tokens": 38
+  },
+  "0175": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "bread_and_butter"
+    ],
+    "tokens": 46
+  },
+  "0176": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0177": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 21
+  },
+  "0178": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "ote"
+    ],
+    "tokens": 25
+  },
+  "0179": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "crypto",
+      "timing"
+    ],
+    "tokens": 60
+  },
+  "0180": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 29
+  },
+  "0181": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry",
+      "macro_time"
+    ],
+    "tokens": 91
+  },
+  "0182": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 20
+  },
+  "0183": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "macro_time"
+    ],
+    "tokens": 38
+  },
+  "0184": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 29
+  },
+  "0185": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 34
+  },
+  "0186": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 87
+  },
+  "0187": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 28
+  },
+  "0188": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0189": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 42
+  },
+  "0190": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 26
+  },
+  "0191": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 31
+  },
+  "0192": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "crypto"
+    ],
+    "tokens": 31
+  },
+  "0193": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 20
+  },
+  "0194": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 21
+  },
+  "0195": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 25
+  },
+  "0196": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec",
+      "ltf_entry"
+    ],
+    "tokens": 54
+  },
+  "0197": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 25
+  },
+  "0198": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec"
+    ],
+    "tokens": 23
+  },
+  "0199": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "fvg"
+    ],
+    "tokens": 52
+  },
+  "0200": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 33
+  },
+  "0201": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "liquidity",
+      "timing"
+    ],
+    "tokens": 50
+  },
+  "0202": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 32
+  },
+  "0203": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 20
+  },
+  "0204": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 26
+  },
+  "0205": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0206": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "pd_array"
+    ],
+    "tokens": 58
+  },
+  "0207": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 20
+  },
+  "0208": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "bread_and_butter",
+      "fvg",
+      "timing"
+    ],
+    "tokens": 53
+  },
+  "0209": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 45
+  },
+  "0210": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 33
+  },
+  "0211": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 26
+  },
+  "0212": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 21
+  },
+  "0213": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry"
+    ],
+    "tokens": 24
+  },
+  "0214": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 37
+  },
+  "0215": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 28
+  },
+  "0216": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 32
+  },
+  "0217": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 26
+  },
+  "0218": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 35
+  },
+  "0219": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 23
+  },
+  "0220": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec"
+    ],
+    "tokens": 30
+  },
+  "0221": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0222": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 31
+  },
+  "0223": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 23
+  },
+  "0224": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 32
+  },
+  "0225": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 21
+  },
+  "0226": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 29
+  },
+  "0227": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 21
+  },
+  "0228": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec"
+    ],
+    "tokens": 25
+  },
+  "0229": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec"
+    ],
+    "tokens": 34
+  },
+  "0230": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec"
+    ],
+    "tokens": 52
+  },
+  "0231": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "risk_exec",
+      "bread_and_butter",
+      "ote"
+    ],
+    "tokens": 70
+  },
+  "0232": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 36
+  },
+  "0233": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 27
+  },
+  "0234": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 30
+  },
+  "0235": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0236": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 30
+  },
+  "0237": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 26
+  },
+  "0238": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry",
+      "ob"
+    ],
+    "tokens": 21
+  },
+  "0239": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "fvg"
+    ],
+    "tokens": 32
+  },
+  "0240": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 23
+  },
+  "0241": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 20
+  },
+  "0242": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "fvg"
+    ],
+    "tokens": 65
+  },
+  "0243": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "timing"
+    ],
+    "tokens": 25
+  },
+  "0244": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 31
+  },
+  "0245": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 24
+  },
+  "0246": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 26
+  },
+  "0247": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 32
+  },
+  "0248": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 22
+  },
+  "0249": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [
+      "ltf_entry",
+      "liquidity",
+      "ob"
+    ],
+    "tokens": 33
+  },
+  "0250": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 20
+  },
+  "0251": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 42
+  },
+  "0252": {
+    "source": "01 - ICT Trading Tutorials\\scalp-every-hour-candle.md",
+    "type": "claim",
+    "topics": [],
+    "tokens": 49
+  }
+}

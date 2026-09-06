@@ -1,0 +1,463 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "ICT Agent \u00e2\u20ac\u201d Staged Analysis Workflow",
+    "subtitle": "Chained prompt-chain with gate checks \u00c2\u00b7 Retry loop \u00c2\u00b7 Paper trade execution",
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "views": [
+      {
+        "id": "chained-path",
+        "label": "Chained analysis (default)",
+        "focus": [
+          "cli",
+          "runtime",
+          "htf_bias",
+          "timing",
+          "ltf_entry",
+          "risk_exec",
+          "paper_trade"
+        ],
+        "note": "Follow the four-stage top-down ICT analysis from market structure to execution decision."
+      },
+      {
+        "id": "gate-retry",
+        "label": "Gate failure & retry",
+        "focus": [
+          "htf_gate",
+          "retry"
+        ],
+        "note": "See how hard gate failures inject feedback and loop back into the same stage."
+      },
+      {
+        "id": "codegen-path",
+        "label": "Code generation chain",
+        "focus": [
+          "cli",
+          "runtime",
+          "outline",
+          "code_gen",
+          "syntax_gate",
+          "artifact"
+        ],
+        "note": "Follow the codegen path from task description through outline, generation, syntax gate, and refine."
+      }
+    ]
+  },
+  "lanes": [
+    {
+      "id": "entry",
+      "label": "Entry Point"
+    },
+    {
+      "id": "orchestration",
+      "label": "Orchestration"
+    },
+    {
+      "id": "analysis",
+      "label": "ICT Analysis Stages"
+    },
+    {
+      "id": "execution",
+      "label": "Execution & Evidence"
+    },
+    {
+      "id": "exception",
+      "label": "Failure Recovery",
+      "variant": "exception"
+    }
+  ],
+  "phases": [
+    {
+      "id": "init",
+      "label": "Init",
+      "fromCol": 0,
+      "toCol": 1
+    },
+    {
+      "id": "analyze",
+      "label": "Analyze",
+      "fromCol": 2,
+      "toCol": 4,
+      "variant": "emphasis"
+    },
+    {
+      "id": "act",
+      "label": "Act",
+      "fromCol": 4,
+      "toCol": 5
+    }
+  ],
+  "nodes": [
+    {
+      "id": "cli",
+      "lane": "entry",
+      "type": "external",
+      "label": "CLI",
+      "sublabel": "python main.py",
+      "col": 0,
+      "width": 90
+    },
+    {
+      "id": "runtime",
+      "lane": "orchestration",
+      "type": "backend",
+      "label": "Agent Runtime",
+      "sublabel": "agent/runtime.py",
+      "col": 0,
+      "width": 90
+    },
+    {
+      "id": "htf_bias",
+      "lane": "analysis",
+      "type": "backend",
+      "label": "HTF Bias",
+      "sublabel": "Stage 1 \u00c2\u00b7 structure + liquidity",
+      "col": 0,
+      "width": 90
+    },
+    {
+      "id": "htf_gate",
+      "lane": "exception",
+      "type": "security",
+      "label": "Gate HTF",
+      "sublabel": "format + content check",
+      "col": 0,
+      "width": 90
+    },
+    {
+      "id": "timing",
+      "lane": "analysis",
+      "type": "backend",
+      "label": "Timing",
+      "sublabel": "Stage 2 \u00c2\u00b7 kill zones + memory",
+      "col": 1,
+      "width": 90
+    },
+    {
+      "id": "timing_gate",
+      "lane": "exception",
+      "type": "security",
+      "label": "Gate Timing",
+      "sublabel": "soft gate",
+      "col": 1,
+      "width": 90
+    },
+    {
+      "id": "ltf_entry",
+      "lane": "analysis",
+      "type": "backend",
+      "label": "LTF Entry",
+      "sublabel": "Stage 3 \u00c2\u00b7 FVG / OB",
+      "col": 2,
+      "width": 90
+    },
+    {
+      "id": "ltf_gate",
+      "lane": "exception",
+      "type": "security",
+      "label": "Gate LTF",
+      "sublabel": "format + logic check",
+      "col": 2,
+      "width": 90
+    },
+    {
+      "id": "risk_exec",
+      "lane": "analysis",
+      "type": "backend",
+      "label": "Risk & Decision",
+      "sublabel": "Stage 4 \u00c2\u00b7 confluence bar",
+      "col": 3,
+      "width": 90
+    },
+    {
+      "id": "confluence_gate",
+      "lane": "exception",
+      "type": "security",
+      "label": "Gate Confluence",
+      "sublabel": "hard gate",
+      "col": 3,
+      "width": 90
+    },
+    {
+      "id": "paper_trade",
+      "lane": "execution",
+      "type": "backend",
+      "label": "Paper Trade",
+      "sublabel": "Alpaca paper execution",
+      "col": 0,
+      "width": 90
+    },
+    {
+      "id": "watch_log",
+      "lane": "execution",
+      "type": "backend",
+      "label": "Watch Log",
+      "sublabel": "no_setup narrative",
+      "col": 1,
+      "width": 90
+    },
+    {
+      "id": "session_log",
+      "lane": "execution",
+      "type": "backend",
+      "label": "Session Log",
+      "sublabel": "harness/session_log.py",
+      "col": 2,
+      "width": 90
+    },
+    {
+      "id": "metrics",
+      "lane": "execution",
+      "type": "backend",
+      "label": "Metrics",
+      "sublabel": "memory/metrics.py \u00e2\u2020\u2019 CSV",
+      "col": 3,
+      "width": 90
+    },
+    {
+      "id": "retry",
+      "lane": "exception",
+      "type": "backend",
+      "label": "Retry",
+      "sublabel": "inject feedback + re-run",
+      "col": 4,
+      "width": 90
+    },
+    {
+      "id": "outline",
+      "lane": "orchestration",
+      "type": "backend",
+      "label": "Outline",
+      "sublabel": "codegen Step 1",
+      "col": 1,
+      "width": 90
+    },
+    {
+      "id": "code_gen",
+      "lane": "orchestration",
+      "type": "backend",
+      "label": "Generate Code",
+      "sublabel": "codegen Step 2",
+      "col": 2,
+      "width": 90
+    },
+    {
+      "id": "syntax_gate",
+      "lane": "exception",
+      "type": "security",
+      "label": "Syntax Gate",
+      "sublabel": "ast.parse + import allow-list",
+      "col": 5,
+      "width": 90
+    },
+    {
+      "id": "artifact",
+      "lane": "execution",
+      "type": "backend",
+      "label": "Artifact",
+      "sublabel": "generated Python script",
+      "col": 4,
+      "width": 90
+    }
+  ],
+  "edges": [
+    {
+      "id": "cli-to-runtime",
+      "from": "cli",
+      "to": "runtime",
+      "label": "run cycle",
+      "variant": "emphasis"
+    },
+    {
+      "id": "runtime-to-htf",
+      "from": "runtime",
+      "to": "htf_bias",
+      "label": "Stage 1",
+      "variant": "emphasis"
+    },
+    {
+      "id": "htf-to-gate",
+      "from": "htf_bias",
+      "to": "htf_gate",
+      "label": "emit bias"
+    },
+    {
+      "id": "htf-gate-pass",
+      "from": "htf_gate",
+      "to": "timing",
+      "label": "pass \u00e2\u0153\u201c"
+    },
+    {
+      "id": "htf-gate-fail",
+      "from": "htf_gate",
+      "to": "retry",
+      "label": "fail \u00e2\u20ac\u201d inject error",
+      "variant": "dashed"
+    },
+    {
+      "id": "timing-to-timing-gate",
+      "from": "timing",
+      "to": "timing_gate",
+      "label": "emit timing"
+    },
+    {
+      "id": "timing-gate-pass",
+      "from": "timing_gate",
+      "to": "ltf_entry",
+      "label": "pass \u00e2\u0153\u201c"
+    },
+    {
+      "id": "timing-gate-fail",
+      "from": "timing_gate",
+      "to": "retry",
+      "label": "soft fail",
+      "variant": "dashed"
+    },
+    {
+      "id": "ltf-to-ltf-gate",
+      "from": "ltf_entry",
+      "to": "ltf_gate",
+      "label": "emit entry model"
+    },
+    {
+      "id": "ltf-gate-pass",
+      "from": "ltf_gate",
+      "to": "risk_exec",
+      "label": "pass \u00e2\u0153\u201c"
+    },
+    {
+      "id": "ltf-gate-fail",
+      "from": "ltf_gate",
+      "to": "retry",
+      "label": "fail \u00e2\u20ac\u201d inject error",
+      "variant": "dashed"
+    },
+    {
+      "id": "risk-to-confluence",
+      "from": "risk_exec",
+      "to": "confluence_gate",
+      "label": "emit decision"
+    },
+    {
+      "id": "confluence-trade",
+      "from": "confluence_gate",
+      "to": "paper_trade",
+      "label": "trade placed",
+      "variant": "emphasis"
+    },
+    {
+      "id": "confluence-watch",
+      "from": "confluence_gate",
+      "to": "watch_log",
+      "label": "no setup",
+      "variant": "dashed"
+    },
+    {
+      "id": "paper-trade-to-log",
+      "from": "paper_trade",
+      "to": "session_log",
+      "label": "log trade"
+    },
+    {
+      "id": "watch-to-log",
+      "from": "watch_log",
+      "to": "session_log",
+      "label": "log analysis"
+    },
+    {
+      "id": "log-to-metrics",
+      "from": "session_log",
+      "to": "metrics",
+      "label": "export CSV"
+    },
+    {
+      "id": "retry-to-htf",
+      "from": "retry",
+      "to": "htf_bias",
+      "label": "re-run stage",
+      "variant": "dashed"
+    },
+    {
+      "id": "runtime-to-outline",
+      "from": "runtime",
+      "to": "outline",
+      "label": "codegen mode",
+      "variant": "dashed"
+    },
+    {
+      "id": "outline-to-code",
+      "from": "outline",
+      "to": "code_gen",
+      "label": "outline approved"
+    },
+    {
+      "id": "code-to-syntax",
+      "from": "code_gen",
+      "to": "syntax_gate",
+      "label": "emit code"
+    },
+    {
+      "id": "syntax-pass",
+      "from": "syntax_gate",
+      "to": "artifact",
+      "label": "passes ast.parse",
+      "variant": "emphasis"
+    }
+  ],
+  "groups": [
+    {
+      "id": "chain_nodes",
+      "label": "Analysis pipeline",
+      "lane": "analysis",
+      "fromCol": 2,
+      "toCol": 4
+    },
+    {
+      "id": "gate_nodes",
+      "label": "Gate checks",
+      "lane": "exception",
+      "fromCol": 2,
+      "toCol": 5
+    },
+    {
+      "id": "evidence_path",
+      "label": "Evidence trail",
+      "lane": "execution",
+      "fromCol": 4,
+      "toCol": 5
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Four-Stage Pipeline",
+      "items": [
+        "HTF Bias \u00e2\u2020\u2019 structure + liquidity + PD array on hourly candles",
+        "Timing \u00e2\u2020\u2019 kill zones, recent context, economic calendar",
+        "LTF Entry \u00e2\u2020\u2019 FVG / order blocks on 15m candles after sweep",
+        "Risk & Execution \u00e2\u2020\u2019 confluence bar check, place or watch"
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "Hard Gate Checks",
+      "items": [
+        "Each stage emits structured output validated by a pure-Python gate",
+        "On failure: error is injected back into the prompt and the stage retries",
+        "GATE_MAX_RETRIES defaults to 2; hard stop emits disciplined no_setup narrative",
+        "Timing gate is soft \u00e2\u20ac\u201d chain continues but marks stage as degraded"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Evidence Trail",
+      "items": [
+        "Every gate result, tool call, and retry is appended to session_log.jsonl",
+        "Memory store holds episodic analyses + semantic MAG embeddings for similarity search",
+        "Per-stage metrics exportable to CSV for backtest comparison and review"
+      ]
+    }
+  ]
+}
