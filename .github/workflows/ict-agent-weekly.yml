@@ -1,0 +1,89 @@
+name: ICT Agent — Weekly Analysis
+
+on:
+  schedule:
+    # Monday morning UTC — run forward test for the coming week
+    - cron: '30 6 * * 1'
+    # Friday afternoon UTC — TGIF check + week review
+    - cron: '30 14 * * 5'
+    # Daily at 06:55 UTC — pre-London scan (weekdays only)
+    - cron: '55 6 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      symbol:
+        description: 'Symbol to analyze (default: all in watchlist)'
+        required: false
+        default: ''
+      mode:
+        description: 'Analysis mode'
+        required: false
+        default: 'forward'
+        type: choice
+        options:
+          - forward
+          - backtest
+          - chained
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name "ICT Agent"
+          git config user.email "agent@gstack.local"
+
+      - name: Run forward analysis
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: |
+          # Determine the week label from today's date
+          WEEK_START=$(date -u +%Y-%m-%d)
+          WEEK_END=$(date -u -d "$WEEK_START + 4 days" +%Y-%m-%d)
+          echo "Analyzing week: ${WEEK_START} to ${WEEK_END}"
+
+          if [ -n "${{ github.event.inputs.symbol }}" ]; then
+            SYMBOL="${{ github.event.inputs.symbol }}"
+          else
+            SYMBOL="XAUUSD"
+          fi
+
+          echo "Running forward test for ${SYMBOL}..."
+          python main.py forward "$SYMBOL" --week "${WEEK_START} to ${WEEK_END}"
+
+      - name: Save session artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sessions-${{ github.run_id }}
+          path: sessions/*.jsonl
+          retention-days: 14
+
+      - name: Commit and push results
+        if: success()
+        run: |
+          git add sessions/ docs/
+          git commit -m "chore: auto-run weekly analysis for ${GITHUB_REF_NAME}" || echo "No changes to commit"
+          git push
