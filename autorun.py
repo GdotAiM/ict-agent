@@ -28,6 +28,33 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
+# Fix SSL certificate verification on Windows (same patch as main.py)
+for _k in ('SSL_CERT_FILE', 'REQUESTS_CA_BUNDLE', 'CURL_CA_BUNDLE'):
+    os.environ.pop(_k, None)
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+try:
+    import httpx
+    _orig_create = httpx._config.create_ssl_context
+    def _fixed_create_ssl_context(verify=True, cert=None, trust_env=True):
+        if isinstance(verify, bool) and verify:
+            return ssl._create_unverified_context()
+        return _orig_create(verify=verify, cert=cert, trust_env=trust_env)
+    httpx._config.create_ssl_context = _fixed_create_ssl_context
+except Exception:
+    pass
+try:
+    import httpcore
+    _orig_httpcore = getattr(httpcore, '_ssl', None)
+    if _orig_httpcore:
+        _orig_ctx = getattr(_orig_httpcore, 'create_ssl_context', None)
+        if _orig_ctx:
+            def _fixed_httpcore_ssl(*a, **kw):
+                return ssl._create_unverified_context()
+            _orig_httpcore.create_ssl_context = _fixed_httpcore_ssl
+except Exception:
+    pass
+
 from agent.runtime import run_cycle
 from memory.store import init_db, get_recent_context, log_analysis
 from harness.chained_loop import _detect_compression
