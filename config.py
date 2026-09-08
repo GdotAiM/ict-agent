@@ -28,8 +28,8 @@ LLM_TOP_P = float(os.getenv("ICT_LLM_TOP_P", "0.9"))
 LLM_FREQUENCY_PENALTY = float(os.getenv("ICT_LLM_FREQUENCY_PENALTY", "0.0"))
 
 # Token budgets (hard stops to prevent runaway stages)
-TOKEN_BUDGET_PER_STAGE = int(os.getenv("ICT_TOKEN_BUDGET_PER_STAGE", "20000"))
-TOKEN_BUDGET_PER_CYCLE = int(os.getenv("ICT_TOKEN_BUDGET_PER_CYCLE", "60000"))
+TOKEN_BUDGET_PER_STAGE = int(os.getenv("ICT_TOKEN_BUDGET_PER_STAGE", "35000"))
+TOKEN_BUDGET_PER_CYCLE = int(os.getenv("ICT_TOKEN_BUDGET_PER_CYCLE", "70000"))
 
 # Message history — bounded sliding window per stage
 MAX_MESSAGE_WINDOW = int(os.getenv("ICT_MAX_MESSAGE_WINDOW", "10"))
