@@ -31,7 +31,7 @@ def get_pd_array(df: pd.DataFrame, range_bars: int = 50) -> dict:
 
 
 def _handle_get_pd_array(tool_input: dict, ctx) -> dict:
-    df = ctx.get_candles(tool_input["symbol"], tool_input["timeframe"])
+    df = ctx.get_candles(tool_input.get('symbol', getattr(ctx, 'symbol', '')), tool_input["timeframe"])
     return get_pd_array(df)
 
 

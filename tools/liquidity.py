@@ -69,7 +69,7 @@ def detect_sweep(df: pd.DataFrame, level: float, direction: str,
 
 
 def _handle_get_liquidity_pools(tool_input: dict, ctx) -> dict:
-    df = ctx.get_candles(tool_input["symbol"], tool_input["timeframe"])
+    df = ctx.get_candles(tool_input.get('symbol', getattr(ctx, 'symbol', '')), tool_input["timeframe"])
     return get_liquidity_pools(df)
 
 

@@ -10,10 +10,15 @@ from tools import market_data
 
 
 class RunContext:
-    def __init__(self):
+    def __init__(self, symbol: str = ""):
         self._candle_cache: dict[tuple, object] = {}
+        self.symbol = symbol  # default symbol for tools that need it
 
-    def get_candles(self, symbol: str, timeframe: str):
+    def get_candles(self, symbol: str | None = None, timeframe: str = "HTF"):
+        """Get candles for a symbol/timeframe, with fallback to ctx.symbol."""
+        symbol = symbol or self.symbol
+        if not symbol:
+            return pd.DataFrame()  # empty → tools will error gracefully
         key = (symbol, timeframe)
         if key not in self._candle_cache:
             interval, lookback = (

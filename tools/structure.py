@@ -72,7 +72,7 @@ def get_market_structure(df: pd.DataFrame, lookback: int = 3) -> dict:
 
 
 def _handle_get_market_structure(tool_input: dict, ctx) -> dict:
-    df = ctx.get_candles(tool_input["symbol"], tool_input["timeframe"])
+    df = ctx.get_candles(tool_input.get('symbol', getattr(ctx, 'symbol', '')), tool_input["timeframe"])
     return get_market_structure(df)
 
 

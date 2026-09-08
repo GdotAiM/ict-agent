@@ -44,7 +44,7 @@ def get_fair_value_gaps(df: pd.DataFrame, max_results: int = 10) -> list:
 
 
 def _handle_get_fair_value_gaps(tool_input: dict, ctx) -> dict:
-    df = ctx.get_candles(tool_input["symbol"], tool_input["timeframe"])
+    df = ctx.get_candles(tool_input.get('symbol', getattr(ctx, 'symbol', '')), tool_input["timeframe"])
     return {"fvgs": get_fair_value_gaps(df)}
 
 

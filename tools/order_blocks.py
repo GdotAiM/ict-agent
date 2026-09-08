@@ -55,7 +55,7 @@ def get_order_blocks(df: pd.DataFrame, displacement_atr_mult: float = 1.5,
 
 
 def _handle_get_order_blocks(tool_input: dict, ctx) -> dict:
-    df = ctx.get_candles(tool_input["symbol"], tool_input["timeframe"])
+    df = ctx.get_candles(tool_input.get('symbol', getattr(ctx, 'symbol', '')), tool_input["timeframe"])
     return {"order_blocks": get_order_blocks(df)}
 
 
