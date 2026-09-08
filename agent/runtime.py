@@ -25,6 +25,8 @@ from harness.codegen_loop import run_codegen
 from agent.prompt_loader import list_prompt_sets
 from agent.prompt_set_runner import run_prompt_set_staged
 from memory import store
+from memory.session_state import get_session_state
+from harness.observability import trace_chain, _get_client
 
 
 def _build_adapter():
@@ -65,17 +67,67 @@ def run_cycle(symbol: str, mode: str = "chained") -> str:
         f"or 'no_setup' analysis and explain why."
     )
 
-    if mode == "free":
-        narrative = run_free_loop(
-            kernel, adapter, SYSTEM_PROMPT, user_message, session, ctx
-        )
-    else:
-        narrative = run_chained(
-            kernel, adapter, SYSTEM_PROMPT, user_message, session, ctx
-        )
+    # Extract key fields from narrative after run completes
+    def _finalize_trace(narrative: str) -> None:
+        try:
+            import re
+            dec_m = re.search(r"DECISION:\s*(TRADE|WATCH|NO_SETUP)", narrative, re.I)
+            conf_m = re.search(r"CONFLUENCE_SCORE:\s*(\d)", narrative, re.I)
+            dec = (dec_m.group(1).lower() if dec_m else "unknown")
+            confluence = int(conf_m.group(1)) if conf_m else 0
+            client = _get_client()
+            client.score_current_trace(
+                name="decision",
+                value=1 if dec == "trade" else 0,
+                comment=dec,
+                metadata={"symbol": symbol, "confluence": confluence},
+            )
+        except Exception:
+            pass  # non-critical
+
+    with trace_chain(symbol, mode=mode):
+        if mode == "free":
+            narrative = run_free_loop(
+                kernel, adapter, SYSTEM_PROMPT, user_message, session, ctx
+            )
+        else:
+            narrative = run_chained(
+                kernel, adapter, SYSTEM_PROMPT, user_message, session, ctx
+            )
+
+        # Persist cross-cycle state (bias + decision streak) for this symbol
+        _update_session_state(symbol, narrative)
+        # Finalize Langfuse trace with decision score
+        _finalize_trace(narrative)
 
     print(f"[session: {session.path}]  [mode: {mode}]")
     return narrative
+
+
+def _update_session_state(symbol: str, narrative: str) -> None:
+    """Extract bias/decision from the chain narrative and persist to disk."""
+    try:
+        # Try structured DECISION line first
+        dec_m = re.search(r"DECISION:\s*(TRADE|WATCH|NO_SETUP)", narrative, re.I)
+        if not dec_m:
+            # Fallback: look for patterns in the closing narrative
+            n_lower = narrative.lower()
+            if "place_paper_trade" in n_lower:
+                dec = "trade"
+            elif re.search(r"\bwatch\b", n_lower):
+                dec = "watch"
+            else:
+                dec = "no_setup"
+        else:
+            dec = dec_m.group(1).lower()
+
+        bias_m = re.search(r"BIAS:\s*(BULLISH|BEARISH|RANGING)", narrative, re.I)
+        bias = (bias_m.group(1).upper() if bias_m else "UNKNOWN")
+
+        state = get_session_state()
+        state.update(symbol, bias=bias, decision=dec)
+    except Exception as e:
+        print(f"[WARN] session state update failed: {e}")
 
 
 def run_codegen_task(task: str) -> str:

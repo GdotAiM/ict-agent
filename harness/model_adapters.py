@@ -9,6 +9,7 @@ the trades you actually act on.
 import json
 import anthropic
 from harness.plugin import ModelAdapterPlugin
+import config
 
 
 def make_anthropic_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
@@ -31,10 +32,15 @@ def make_anthropic_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
                         'name': block.name,
                         'input': block.input
                     })
+        usage = response.usage
         return {
             'text': '\n'.join(text_parts),
             'tool_calls': tool_calls,
-            'done': response.stop_reason != 'tool_use'
+            'done': response.stop_reason != 'tool_use',
+            'usage': {
+                'input_tokens': int(getattr(usage, 'input_tokens', 0)),
+                'output_tokens': int(getattr(usage, 'output_tokens', 0)),
+            }
         }
 
     def extract_text(response) -> str:
@@ -88,6 +94,9 @@ def make_deepseek_adapter(api_key: str, model: str = "deepseek-v4-flash") -> Mod
         oai_messages = [{"role": "system", "content": system}] + messages
         return client.chat.completions.create(
             model=model, messages=oai_messages, tools=to_openai_tools(tools),
+            temperature=config.LLM_TEMPERATURE,
+            top_p=config.LLM_TOP_P,
+            frequency_penalty=config.LLM_FREQUENCY_PENALTY,
         )
 
     def extract_text(response) -> str:
@@ -133,15 +142,28 @@ def make_openrouter_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
 
     def call(system: str, tools: list, messages: list):
         oai_messages = [{"role": "system", "content": system}] + messages
-        return client.chat.completions.create(
+        result = client.chat.completions.create(
             model=model, messages=oai_messages, tools=to_openai_tools(tools),
+            temperature=config.LLM_TEMPERATURE,
+            top_p=config.LLM_TOP_P,
+            frequency_penalty=config.LLM_FREQUENCY_PENALTY,
         )
+        usage = result.usage
+        return {
+            '_raw': result,
+            'usage': {
+                'input_tokens': int(getattr(usage, 'prompt_tokens', 0)),
+                'output_tokens': int(getattr(usage, 'completion_tokens', 0)),
+            }
+        }
 
     def extract_text(response) -> str:
-        return response.choices[0].message.content or ""
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].message.content or ""
 
     def extract_tool_calls(response) -> list:
-        msg = response.choices[0].message
+        raw = getattr(response, '_raw', response)
+        msg = raw.choices[0].message
         if not msg.tool_calls:
             return []
         out = []
@@ -154,10 +176,12 @@ def make_openrouter_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
         return out
 
     def is_done(response) -> bool:
-        return response.choices[0].finish_reason != "tool_calls"
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].finish_reason != "tool_calls"
 
     def to_assistant_message(response) -> dict:
-        return response.choices[0].message.model_dump()
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].message.model_dump()
 
     def to_tool_result_message(results: list) -> dict:
         return {"role": "tool", "tool_call_id": results[0]["tool_use_id"],
@@ -183,15 +207,28 @@ def make_cerebras_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
 
     def call(system: str, tools: list, messages: list):
         oai_messages = [{"role": "system", "content": system}] + messages
-        return client.chat.completions.create(
+        result = client.chat.completions.create(
             model=model, messages=oai_messages, tools=to_openai_tools(tools),
+            temperature=config.LLM_TEMPERATURE,
+            top_p=config.LLM_TOP_P,
+            frequency_penalty=config.LLM_FREQUENCY_PENALTY,
         )
+        usage = result.usage
+        return {
+            '_raw': result,
+            'usage': {
+                'input_tokens': int(getattr(usage, 'prompt_tokens', 0)),
+                'output_tokens': int(getattr(usage, 'completion_tokens', 0)),
+            }
+        }
 
     def extract_text(response) -> str:
-        return response.choices[0].message.content or ""
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].message.content or ""
 
     def extract_tool_calls(response) -> list:
-        msg = response.choices[0].message
+        raw = getattr(response, '_raw', response)
+        msg = raw.choices[0].message
         if not msg.tool_calls:
             return []
         out = []
@@ -204,10 +241,12 @@ def make_cerebras_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
         return out
 
     def is_done(response) -> bool:
-        return response.choices[0].finish_reason != "tool_calls"
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].finish_reason != "tool_calls"
 
     def to_assistant_message(response) -> dict:
-        return response.choices[0].message.model_dump()
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].message.model_dump()
 
     def to_tool_result_message(results: list) -> dict:
         return {"role": "tool", "tool_call_id": results[0]["tool_use_id"],
@@ -233,15 +272,28 @@ def make_groq_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
 
     def call(system: str, tools: list, messages: list):
         oai_messages = [{"role": "system", "content": system}] + messages
-        return client.chat.completions.create(
+        result = client.chat.completions.create(
             model=model, messages=oai_messages, tools=to_openai_tools(tools),
+            temperature=config.LLM_TEMPERATURE,
+            top_p=config.LLM_TOP_P,
+            frequency_penalty=config.LLM_FREQUENCY_PENALTY,
         )
+        usage = result.usage
+        return {
+            '_raw': result,
+            'usage': {
+                'input_tokens': int(getattr(usage, 'prompt_tokens', 0)),
+                'output_tokens': int(getattr(usage, 'completion_tokens', 0)),
+            }
+        }
 
     def extract_text(response) -> str:
-        return response.choices[0].message.content or ""
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].message.content or ""
 
     def extract_tool_calls(response) -> list:
-        msg = response.choices[0].message
+        raw = getattr(response, '_raw', response)
+        msg = raw.choices[0].message
         if not msg.tool_calls:
             return []
         out = []
@@ -254,10 +306,12 @@ def make_groq_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
         return out
 
     def is_done(response) -> bool:
-        return response.choices[0].finish_reason != "tool_calls"
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].finish_reason != "tool_calls"
 
     def to_assistant_message(response) -> dict:
-        return response.choices[0].message.model_dump()
+        raw = getattr(response, '_raw', response)
+        return raw.choices[0].message.model_dump()
 
     def to_tool_result_message(results: list) -> dict:
         return {"role": "tool", "tool_call_id": results[0]["tool_use_id"],

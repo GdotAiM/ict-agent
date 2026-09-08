@@ -111,7 +111,16 @@ function makeAnthropicRequest() {
           .filter(b => b.type === 'tool_use')
           .map(b => ({ id: b.id, name: b.name, input: b.input || {} }));
         const done = result.stop_reason !== 'tool_use';
-        console.log(JSON.stringify({ text: textParts, tool_calls: toolCalls, done }));
+        const usage = result.usage || {};
+        console.log(JSON.stringify({
+          text: textParts,
+          tool_calls: toolCalls,
+          done,
+          usage: {
+            input_tokens: usage.input_tokens || 0,
+            output_tokens: usage.output_tokens || 0,
+          }
+        }));
       } catch(e) {
         console.log(JSON.stringify({ error: 'Failed to parse response: ' + e.message, raw: data.substring(0, 200) }));
       }
@@ -171,7 +180,15 @@ function makeOpenAIRequest() {
           name: tc.function.name,
           input: JSON.parse(tc.function.arguments || '{}')
         }));
-        console.log(JSON.stringify({ text, tool_calls: toolCalls, done: !toolCalls.length }));
+        console.log(JSON.stringify({
+          text,
+          tool_calls: toolCalls,
+          done: !toolCalls.length,
+          usage: {
+            input_tokens: result.usage?.prompt_tokens || 0,
+            output_tokens: result.usage?.completion_tokens || 0,
+          }
+        }));
       } catch(e) {
         console.log(JSON.stringify({ error: 'Failed to parse response: ' + e.message, raw: data.substring(0, 200) }));
       }

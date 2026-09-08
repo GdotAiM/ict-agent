@@ -23,6 +23,10 @@ from harness.context import RunContext
 from harness.session_log import SessionLog
 from memory.metrics import record_stage_metrics
 from memory.store import get_similar_setups, get_cross_symbol_similar
+from memory.session_state import get_session_state
+from harness.token_tracker import TokenTracker, BudgetExceeded
+from harness.narrative_compressor import compress_narratives
+from harness.observability import trace_stage, trace_tool, trace_llm_call, _get_client
 from agent.gates import (
     gate_htf_bias, gate_timing, gate_ltf_entry, gate_confluence, GateResult,
 )
@@ -224,10 +228,12 @@ def _synthesize_htf_narrative(tool_results: list) -> str:
 
     bias_word = trend if trend in ("BULLISH", "BEARISH") else "RANGING"
     draw_on = f"SSL at {nearest_ssl:.2f}" if nearest_ssl else "BSL at " + (f"{nearest_bsl:.2f}" if nearest_bsl else "liquidity")
+    price_str = f"{price:.2f}" if price is not None else "?"
+    eq_str = f"{eq:.2f}" if eq is not None else "?"
 
     lines = [
         f"[HTF Analysis] Trend: {bias_word}. BOS at {bos}.",
-        f"Price at {price:.2f} in {zone} zone (equilibrium {eq:.2f}).",
+        f"Price at {price_str} in {zone} zone (equilibrium {eq_str}).",
         f"Draw-on liquidity: {draw_on}.",
         f"BIAS: {bias_word}",
         f"DRAW_ON_LIQUIDITY: {draw_on}",
@@ -386,6 +392,7 @@ def _run_single_stage(
     ctx: RunContext,
     max_iters: int,
     accumulated_narratives: list[str] | None = None,
+    token_tracker: TokenTracker | None = None,
 ) -> tuple[str, list]:
     """
     Runs one stage of tool-calling until the model stops or max_iters.
@@ -395,6 +402,7 @@ def _run_single_stage(
     """
     allowed = STAGE_TOOLS.get(stage_name, [])
     tools = _filter_tools(kernel, allowed)
+    token_tracker = token_tracker or TokenTracker()
 
     session.append("stage_start", {
         "stage": stage_name,
@@ -403,10 +411,19 @@ def _run_single_stage(
 
     messages.append({"role": "user", "content": stage_user_message})
 
+    # Trim stale head of message history to bounded window
+    _trim_messages(messages, max_window=config.MAX_MESSAGE_WINDOW)
+
     stage_text = ""
     collected_tool_results: list = []
     for step in range(max_iters):
-        response = adapter.call(system_prompt, tools, messages)
+        response = trace_llm_call(
+            adapter, system_prompt, tools, messages,
+            model_name=adapter.name,
+            extra_tags={"stage": stage_name},
+        )
+        # Trim after each turn to prevent unbounded growth within a stage
+        _trim_messages(messages, max_window=config.MAX_MESSAGE_WINDOW)
         messages.append(adapter.to_assistant_message(response))
 
         text = adapter.extract_text(response)
@@ -417,6 +434,22 @@ def _run_single_stage(
             "text": text,
             "tool_calls": [c["name"] for c in calls],
         })
+
+        # Token budget enforcement
+        try:
+            token_tracker.add(response)
+        except BudgetExceeded as exc:
+            session.append("budget_exceeded", {
+                "stage": stage_name,
+                "step": step,
+                "reason": str(exc),
+                "stage_tokens": token_tracker.stage_used(),
+                "cycle_tokens": token_tracker.cycle_used(),
+            })
+            # Truncate response to force a stop — inject budget warning
+            if text.strip():
+                text += f"\n\n[BUDGET ALERT: {exc} — be concise in any follow-up]"
+            break
 
         # Only keep non-empty text - agnes sometimes returns "" after tool results
         stripped = text.strip()
@@ -433,12 +466,15 @@ def _run_single_stage(
                     "error": f"tool '{call['name']}' not permitted in stage '{stage_name}'"
                 }
             else:
-                session.append("tool_call", {
-                    "stage": stage_name,
-                    "name": call["name"],
-                    "input": call["input"],
-                })
-                result = kernel.dispatch(call["name"], call["input"], ctx)
+                _tool_input = call.get("input", {}) or {}
+                _tool_input.pop("symbol", None)  # symbol is passed explicitly, not via **kwargs
+                with trace_tool(call["name"], symbol=getattr(ctx, "symbol", "UNKNOWN"), **_tool_input):
+                    session.append("tool_call", {
+                        "stage": stage_name,
+                        "name": call["name"],
+                        "input": call["input"],
+                    })
+                    result = kernel.dispatch(call["name"], call["input"], ctx)
             session.append("tool_result", {
                 "stage": stage_name,
                 "name": call["name"],
@@ -502,6 +538,7 @@ def _run_stage_with_retries(
     max_iters: int,
     gate_fn,
     accumulated_narratives: list[str],
+    token_tracker: TokenTracker | None = None,
 ) -> tuple[str, list, GateResult, bool]:
     """
     Execute a stage, run its gate, and on failure retry up to GATE_MAX_RETRIES
@@ -514,6 +551,8 @@ def _run_stage_with_retries(
     attempt = 0
     stage_text = ""
     gate = GateResult(passed=False, reason="not run")
+    token_tracker = token_tracker or TokenTracker()
+    token_tracker.reset_stage()  # reset per-stage counter for this stage
 
     while attempt <= max_retries:
         # Build the prompt for this attempt
@@ -542,6 +581,7 @@ def _run_stage_with_retries(
         stage_text, messages = _run_single_stage(
             kernel, adapter, system_prompt, stage_name, prompt,
             messages, session, ctx, max_iters,
+            token_tracker=token_tracker,
         )
 
         gate = gate_fn(stage_text)
@@ -589,11 +629,69 @@ def _run_stage_with_retries(
 
 
 
-def _build_mag_context(symbol: str, session) -> str:
-    """Build MAG context string from semantic recall of past setups."""
+def _trim_messages(messages: list, max_window: int) -> None:
+    """Trim message history to a bounded sliding window.
+
+    Keeps: system prompt (index 0) + last N user-assistant pairs.
+    Tool-result messages inside the kept region are preserved; older ones
+    are dropped. This prevents unbounded growth within a single stage's
+    tool-call loop without losing the most recent reasoning.
+    """
+    if len(messages) <= max_window * 2 + 1:
+        return
+    # Always keep the system prompt (first message)
+    kept = [messages[0]]
+    # Walk backwards from the end, keeping pairs of (user/tool_result) or
+    # (assistant/tool_result) — actually we just keep the tail up to max_window
+    # full turns (each turn = assistant message + any following tool results).
+    # Simpler: keep last max_window*2 entries + the system prompt.
+    tail = messages[-(max_window * 2):]
+    # Ensure we start with an assistant message in the tail so it pairs cleanly
+    if tail and tail[0].get("role") == "user":
+        tail = tail[1:]
+    kept.extend(tail)
+    messages.clear()
+    messages.extend(kept)
+
+
+def _compress_narratives_for_stage(accumulator: list[str]) -> str:
+    """Lightweight non-LLM compression: extract only key-value lines.
+
+    Used as fallback when no adapter is available (or to avoid an extra LLM
+    call on retry loops). Produces ~150 tokens from ~2000 of raw narrative.
+    """
     lines = []
-    
-    # Same-symbol recall
+    for block in accumulator:
+        for line in block.splitlines():
+            stripped = line.strip()
+            # Keep lines that are KEY: VALUE format (structured output)
+            if ":" in stripped and not stripped.startswith("#") and not stripped.startswith("-"):
+                # Only keep lines that look like our structured fields
+                upper = stripped.upper()
+                if any(kw in upper for kw in [
+                    "BIAS:", "DRAW_ON_LIQUIDITY:", "PD_ARRAY:",
+                    "KILL_ZONE:", "ENTRY_TRIGGER:", "INVALIDATION:",
+                    "TARGET:", "CONFLUENCE_SCORE:", "DECISION:",
+                    "STAGE",
+                ]):
+                    lines.append(stripped)
+    return "\n".join(lines) if lines else ""
+
+
+def _build_mag_context(symbol: str, session) -> str:
+    """Build MAG context string from semantic recall + cross-cycle state."""
+    lines = []
+
+    # Cross-cycle session state (decisions, streaks, last scan time)
+    try:
+        state = get_session_state()
+        state_summary = state.build_summary(symbol)
+        if state_summary:
+            lines.append(f"[SESSION STATE] {state_summary}")
+    except Exception:
+        pass
+
+    # Same-symbol semantic recall
     similar = get_similar_setups(symbol, k=3, query_text=f"htf bias {symbol} market structure")
     if similar:
         lines.append(f"Relevant past setups for {symbol}:")
@@ -602,7 +700,7 @@ def _build_mag_context(symbol: str, session) -> str:
                 f"  - {s['ts'][:10]} | {s['bias']} | trigger={s['trigger_type']} | "
                 f"zone={s['zone']} | decision={s['decision']} | sim={s['similarity']}"
             )
-    
+
     # Cross-symbol recall
     cross = get_cross_symbol_similar(symbol, k=2, query_text=f"market structure bias liquidity")
     if cross:
@@ -612,7 +710,7 @@ def _build_mag_context(symbol: str, session) -> str:
                 f"  - {s['symbol']} | {s['bias']} | trigger={s['trigger_type']} | "
                 f"zone={s['zone']} | decision={s['decision']} | sim={s['similarity']}"
             )
-    
+
     return chr(10).join(lines) if lines else ""
 
 def run_chained(
@@ -630,7 +728,8 @@ def run_chained(
     """
     ctx = ctx or RunContext()
     messages: list = [{"role": "user", "content": user_message}]
-    
+    tracker = TokenTracker()
+
     # MAG: inject semantic recall into Stage 1 context
     symbol = getattr(ctx, "symbol", None) or "XAUUSD"
     mag_context = _build_mag_context(symbol, session)
@@ -643,10 +742,14 @@ def run_chained(
         "mode": "chained",
         "gate_max_retries": getattr(config, "GATE_MAX_RETRIES", 2),
     })
-    session.append("chain_start", {"stages": STAGE_ORDER})
+    session.append("chain_start", {"stages": STAGE_ORDER, "budget": {
+        "per_stage": config.TOKEN_BUDGET_PER_STAGE,
+        "per_cycle": config.TOKEN_BUDGET_PER_CYCLE,
+    }})
 
     accumulated_narratives: list[str] = []
     max_iters = 5  # Allow multiple tool-call rounds before final narrative
+    brief = ""  # Compressed context passed between stages
 
     # ---------- Stage 1: HTF Bias ----------
     base1 = (
@@ -657,8 +760,10 @@ def run_chained(
         kernel, adapter, system_prompt, "htf_bias", base1,
         messages, session, ctx, max_iters,
         gate_htf_bias, accumulated_narratives,
+        token_tracker=tracker,
     )
     accumulated_narratives.append(f"[STAGE 1 — HTF BIAS]\n{text1}")
+    brief = _compress_narratives_for_stage(accumulated_narratives)
     if not cont:
         final = (
             f"CHAIN STOPPED at Stage 1 (HTF Bias) after retries exhausted.\n"
@@ -673,27 +778,28 @@ def run_chained(
     # ---------- Stage 2: Timing ----------
     base2 = (
         STAGE_PROMPTS["timing"]
-        + "\n\n--- Accumulated context from prior stages ---\n"
-        + "\n\n".join(accumulated_narratives)
+        + (f"\n\n--- Prior stage summary ---\n{brief}\n" if brief else "")
     )
     text2, messages, gate2, cont = _run_stage_with_retries(
         kernel, adapter, system_prompt, "timing", base2,
         messages, session, ctx, max_iters,
         gate_timing, accumulated_narratives,
+        token_tracker=tracker,
     )
     accumulated_narratives.append(f"[STAGE 2 — TIMING]\n{text2}")
+    brief = _compress_narratives_for_stage(accumulated_narratives)
     # Timing is soft; we rarely hard-stop here, but the helper already handles it
 
     # ---------- Stage 3: LTF Entry ----------
     base3 = (
         STAGE_PROMPTS["ltf_entry"]
-        + "\n\n--- Accumulated context from prior stages ---\n"
-        + "\n\n".join(accumulated_narratives)
+        + (f"\n\n--- Prior stage summary ---\n{brief}\n" if brief else "")
     )
     text3, messages, gate3, cont = _run_stage_with_retries(
         kernel, adapter, system_prompt, "ltf_entry", base3,
         messages, session, ctx, max_iters,
         gate_ltf_entry, accumulated_narratives,
+        token_tracker=tracker,
     )
     accumulated_narratives.append(f"[STAGE 3 — LTF ENTRY]\n{text3}")
     if not cont:
@@ -707,17 +813,30 @@ def run_chained(
         return final
 
     # ---------- Stage 4: Risk & Execution ----------
-    combined = "\n\n".join(accumulated_narratives)
-    # Pre-check confluence so we can warn the model
-    pre_gate = gate_confluence(combined + "\n" + text3)
+    # Pre-check confluence using raw Stage 3 text (gate needs structured fields)
+    pre_gate = gate_confluence(text3 or "")
 
     base4 = (
         STAGE_PROMPTS["risk_exec"]
-        + "\n\n--- Accumulated context from prior stages ---\n"
-        + combined
+        + (f"\n\n--- Prior stage summary ---\n{brief}\n" if brief else "")
+        + (f"\n\n[Full Stage 3 output for reference]\n{text3}" if text3 else "")
         + f"\n\nPre-check confluence result: {pre_gate.reason}"
     )
     if not pre_gate.passed:
+        # Also check cycle budget before entering stage 4
+        try:
+            tracker.check_cycle()
+        except BudgetExceeded as exc:
+            session.append("budget_exceeded", {
+                "stage": "risk_exec (pre-check)",
+                "reason": str(exc),
+                "stage_tokens": tracker.stage_used(),
+                "cycle_tokens": tracker.cycle_used(),
+            })
+            return (
+                f"CHAIN STOPPED — cycle token budget exceeded ({exc}).\n\n"
+                f"Full chain so far:\n" + "\n\n".join(accumulated_narratives)
+            )
         base4 += (
             "\n\nIMPORTANT: Confluence bar was NOT met on pre-check. "
             "You must NOT call place_paper_trade. "
@@ -728,6 +847,7 @@ def run_chained(
         kernel, adapter, system_prompt, "risk_exec", base4,
         messages, session, ctx, max_iters,
         gate_confluence, accumulated_narratives,
+        token_tracker=tracker,
     )
     accumulated_narratives.append(f"[STAGE 4 — RISK & DECISION]\n{text4}")
 
@@ -736,5 +856,13 @@ def run_chained(
         + "\n\n".join(accumulated_narratives)
     )
     session.append("final_narrative", {"text": final, "stopped_at": None})
-    session.append("chain_end", {"gates_passed": True})
+    session.append("chain_end", {
+        "gates_passed": True,
+        "tokens": {
+            "stage_used": tracker.stage_used(),
+            "cycle_used": tracker.cycle_used(),
+            "budget_per_stage": config.TOKEN_BUDGET_PER_STAGE,
+            "budget_per_cycle": config.TOKEN_BUDGET_PER_CYCLE,
+        },
+    })
     return final

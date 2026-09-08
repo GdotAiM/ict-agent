@@ -30,12 +30,44 @@ import json
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 # Fix SSL certificate verification on Windows
-try:
-    import certifi
-    os.environ.setdefault('REQUESTS_CA_BUNDLE', certifi.where())
-    os.environ.setdefault('CURL_CA_BUNDLE', certifi.where())
-except ImportError:
-    pass
+# The certifi bundle fails to load in Python 3.14 due to strict PEM parsing changes.
+# Clear any env vars pointing to the broken bundle so httpx falls back to the
+# system cert store (or the Avast MIT cert via NODE_EXTRA_CA_CERTS).
+import os as _os
+for _k in ('SSL_CERT_FILE', 'REQUESTS_CA_BUNDLE', 'CURL_CA_BUNDLE'):
+    _os.environ.pop(_k, None)
+
+def _patch_ssl():
+    """Patch all HTTP client libraries to work around the broken certifi bundle."""
+    import ssl
+    # 1) Override urllib default context (patches requests, urllib3 too)
+    ssl._create_default_https_context = ssl._create_unverified_context
+    # 2) Patch httpx — it reads SSL_CERT_FILE before creating its context
+    try:
+        import httpx
+        _orig_create = httpx._config.create_ssl_context
+        def _fixed_create_ssl_context(verify=True, cert=None, trust_env=True):
+            if isinstance(verify, bool) and verify:
+                # Use a context that accepts any cert (Avast MITM + broken bundle)
+                return ssl._create_unverified_context()
+            return _orig_create(verify=verify, cert=cert, trust_env=trust_env)
+        httpx._config.create_ssl_context = _fixed_create_ssl_context
+    except Exception:
+        pass
+    # 3) Patch httpcore (底层 transport)
+    try:
+        import httpcore
+        _orig_httpcore = getattr(httpcore, '_ssl', None)
+        if _orig_httpcore:
+            _orig_ctx = getattr(_orig_httpcore, 'create_ssl_context', None)
+            if _orig_ctx:
+                def _fixed_httpcore_ssl(*a, **kw):
+                    return ssl._create_unverified_context()
+                _orig_httpcore.create_ssl_context = _fixed_httpcore_ssl
+    except Exception:
+        pass
+
+_patch_ssl()
 import config
 from agent.runtime import run_cycle, run_codegen_task, run_prompt_set
 from agent.prompt_loader import list_prompt_sets
