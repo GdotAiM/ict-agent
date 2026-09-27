@@ -36,6 +36,11 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='repla
 import os as _os
 for _k in ('SSL_CERT_FILE', 'REQUESTS_CA_BUNDLE', 'CURL_CA_BUNDLE'):
     _os.environ.pop(_k, None)
+# CRITICAL: Apply the global SSL context patch BEFORE any HTTP-capable library
+# is imported. yfinance/curl_cffi reads the default context at import time,
+# so the patch must precede `import config` and everything else.
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 def _patch_ssl():
     """Patch all HTTP client libraries to work around the broken certifi bundle."""
@@ -68,6 +73,11 @@ def _patch_ssl():
         pass
 
 _patch_ssl()
+# Ensure the local package directory is on sys.path so `import config` resolves
+# regardless of how the module is invoked (python -m, direct path, etc.)
+_sys_path = os.path.dirname(os.path.abspath(__file__))
+if _sys_path not in sys.path:
+    sys.path.insert(0, _sys_path)
 import config
 from agent.runtime import run_cycle, run_codegen_task, run_prompt_set
 from agent.prompt_loader import list_prompt_sets

@@ -467,8 +467,15 @@ def _run_single_stage(
                 }
             else:
                 _tool_input = call.get("input", {}) or {}
-                _tool_input.pop("symbol", None)  # symbol is passed explicitly, not via **kwargs
-                with trace_tool(call["name"], symbol=getattr(ctx, "symbol", "UNKNOWN"), **_tool_input):
+                # trace_tool must never receive 'symbol' — it takes it as a
+                # positional kwarg and **_tool_input would duplicate it.
+                # kernel.dispatch receives the ORIGINAL call["input"] below,
+                # so handlers like log_analysis/get_recent_context still get
+                # symbol from there.
+                _trace_symbol = getattr(ctx, "symbol", "UNKNOWN")
+                if "symbol" in _tool_input:
+                    _trace_symbol = _tool_input["symbol"]
+                with trace_tool(call["name"], symbol=_trace_symbol):
                     session.append("tool_call", {
                         "stage": stage_name,
                         "name": call["name"],
@@ -823,25 +830,19 @@ def run_chained(
         + f"\n\nPre-check confluence result: {pre_gate.reason}"
     )
     if not pre_gate.passed:
-        # Also check cycle budget before entering stage 4
-        try:
-            tracker.check_cycle()
-        except BudgetExceeded as exc:
-            session.append("budget_exceeded", {
-                "stage": "risk_exec (pre-check)",
-                "reason": str(exc),
-                "stage_tokens": tracker.stage_used(),
-                "cycle_tokens": tracker.cycle_used(),
-            })
-            return (
-                f"CHAIN STOPPED — cycle token budget exceeded ({exc}).\n\n"
-                f"Full chain so far:\n" + "\n\n".join(accumulated_narratives)
-            )
-        base4 += (
-            "\n\nIMPORTANT: Confluence bar was NOT met on pre-check. "
-            "You must NOT call place_paper_trade. "
-            "Log a WATCH or NO_SETUP analysis and explain why you are standing aside."
+        # HARD STOP: confl < 3 means no trade. Do not enter Stage 4.
+        # This prevents the LLM from generating TRADE decisions on low-confluence setups.
+        final = (
+            "=== ICT CHAINED ANALYSIS COMPLETE ===\n\n"
+            + "\n\n".join(accumulated_narratives)
+            + f"\n\nPRE-CHECK FAILED: {pre_gate.reason}\n\n"
+            "Decision: NO_SETUP — confluence bar not met. "
+            "Per ICT discipline, standing aside is the correct response."
         )
+        session.append("final_narrative", {"text": final, "stopped_at": "pre_gate_confluence"})
+        session.append("chain_end", {"gates_passed": False, "stopped_at": "pre_gate_confluence",
+                                      "reason": pre_gate.reason})
+        return final
 
     text4, messages, gate4, _ = _run_stage_with_retries(
         kernel, adapter, system_prompt, "risk_exec", base4,

@@ -56,7 +56,7 @@ def build_default_kernel() -> PluginKernel:
     """The mount list — this IS the agent's capability surface. Comment a
     line out to remove a tool; add a module + PLUGINS list to grant a new
     one. Nothing else in the codebase needs to change."""
-    from tools import market_data, structure, liquidity, fvg, order_blocks, pd_arrays, kill_zones, execution, knowledge, economic_calendar
+    from tools import market_data, structure, liquidity, fvg, order_blocks, pd_arrays, kill_zones, execution, knowledge, economic_calendar, liquidity_voids
     from memory import store as memory_store
 
     kernel = PluginKernel()
@@ -70,5 +70,6 @@ def build_default_kernel() -> PluginKernel:
     kernel.mount_tools(execution.PLUGINS)
     kernel.mount_tools(knowledge.PLUGINS)
     kernel.mount_tools(economic_calendar.PLUGINS)
+    kernel.mount_tools(liquidity_voids.PLUGINS)
     kernel.mount_tools(memory_store.PLUGINS)
     return kernel

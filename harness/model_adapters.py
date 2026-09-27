@@ -13,7 +13,9 @@ import config
 
 
 def make_anthropic_adapter(api_key: str, model: str) -> ModelAdapterPlugin:
-    client = anthropic.Anthropic(api_key=api_key)
+    import httpx2
+    http = httpx2.Client(verify=False)  # work around broken certifi on Python 3.14 / Avast MITM
+    client = anthropic.Anthropic(api_key=api_key, http_client=http)
 
     def call(system: str, tools: list, messages: list):
         response = client.messages.create(

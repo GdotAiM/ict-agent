@@ -19,7 +19,7 @@ ALPACA_SECRET_KEY = os.getenv("ALPACA_SECRET_KEY", "")
 ALPACA_PAPER = os.getenv("ALPACA_PAPER", "true").lower() == "true"
 
 # LLM component
-MODEL = os.getenv("ICT_AGENT_MODEL", "claude-sonnet-4-6")
+MODEL = os.getenv("ICT_AGENT_MODEL", "claude-sonnet-5")
 MAX_TOOL_ITERATIONS = 6
 
 # LLM sampling controls
@@ -28,8 +28,8 @@ LLM_TOP_P = float(os.getenv("ICT_LLM_TOP_P", "0.9"))
 LLM_FREQUENCY_PENALTY = float(os.getenv("ICT_LLM_FREQUENCY_PENALTY", "0.0"))
 
 # Token budgets (hard stops to prevent runaway stages)
-TOKEN_BUDGET_PER_STAGE = int(os.getenv("ICT_TOKEN_BUDGET_PER_STAGE", "35000"))
-TOKEN_BUDGET_PER_CYCLE = int(os.getenv("ICT_TOKEN_BUDGET_PER_CYCLE", "70000"))
+TOKEN_BUDGET_PER_STAGE = int(os.getenv("ICT_TOKEN_BUDGET_PER_STAGE", "50000"))
+TOKEN_BUDGET_PER_CYCLE = int(os.getenv("ICT_TOKEN_BUDGET_PER_CYCLE", "100000"))
 
 # Message history — bounded sliding window per stage
 MAX_MESSAGE_WINDOW = int(os.getenv("ICT_MAX_MESSAGE_WINDOW", "10"))
@@ -63,6 +63,16 @@ LOOKBACK_LTF = "5d"
 RISK_PER_TRADE_PCT = 0.5      # % of account equity risked per trade
 MIN_RR = 2.0                  # minimum reward:risk the agent will accept
 MAX_OPEN_POSITIONS = 3
+
+# Time-weighted risk adjustment
+# Multipliers applied based on kill zone (higher = more conviction window)
+KILL_ZONE_RISK_MULT = {
+    "ny_am": 1.5,    # Highest conviction — main institutional session
+    "london": 1.3,   # Second highest — European overlap
+    "ny_pm": 1.2,    # Moderate — afternoon extension
+    "asian": 0.7,    # Lower conviction — range-bound typically
+    "outside": 0.5,  # Lowest — avoid trading unless exceptional
+}
 
 # Kill zones (UTC hours, ICT's standard windows — adjust for DST if needed)
 KILL_ZONES_UTC = {

@@ -11,7 +11,8 @@ from datetime import datetime, timezone
 def get_candles_from_tv(symbol: str, interval: str) -> pd.DataFrame | None:
     """Fetch candles from TradingView CDP via smc-icm-trading's fetch_candles.cjs."""
     import subprocess, os, tempfile
-    # Map symbol to smc-icm format
+    # Map symbol to smc-icm format — strip =X suffix only after the lookup key
+    # is resolved; do NOT modify the lookup key itself (keep EURUSD=X for the map).
     sym = symbol.replace("=X", "")
     # Map interval to TV resolution
     tf_map = {"1h": "60", "15m": "15", "5m": "5", "1m": "1", "4h": "240", "1d": "D", "1w": "W", "15": "15", "5": "5", "1": "1", "60": "60", "240": "240"}
@@ -43,7 +44,7 @@ def get_candles_from_tv(symbol: str, interval: str) -> pd.DataFrame | None:
                 else:
                     # List of dicts without time - wrap in expected format
                     parsed = [{"timeframes": {interval: {"candles": parsed}}}]
-            
+
             if isinstance(parsed, dict):
                 tfs = parsed.get("timeframes", {})
                 tv_key = tf_map.get(interval, interval)
@@ -53,6 +54,25 @@ def get_candles_from_tv(symbol: str, interval: str) -> pd.DataFrame | None:
                     if "time" in df.columns:
                         df["time"] = pd.to_datetime(df["time"], unit="ms", utc=True)
                         df.set_index("time", inplace=True)
+                    # ── Cross-symbol contamination guard ──────────────────────
+                    # If the fetched close is wildly outside expected ranges for
+                    # this symbol, the CDP tab may still be on a different chart.
+                    _expected_ranges = {
+                        "EURUSD": (1.0, 1.5), "GBPUSD": (1.2, 1.6),
+                        "XAUUSD": (3000, 6000), "NAS100": (20000, 40000),
+                        "SPY": (600, 900), "USDOLLAR": (95, 120),
+                    }
+                    pair_key = sym.upper()
+                    if pair_key in _expected_ranges:
+                        lo, hi = _expected_ranges[pair_key]
+                        closes = df["close"].values
+                        if len(closes) > 0:
+                            last_close = float(closes[-1])
+                            if last_close < lo or last_close > hi:
+                                print(f"[WARN] Contamination detected: {sym}@{interval} returned close={last_close:.4f} "
+                                      f"outside expected [{lo}, {hi}] — discarding, will fall back")
+                                return None
+                    # ── End guard ─────────────────────────────────────────────
                     return df
         except Exception as e:
             print(f"[WARN] TV CDP parse failed: {e}")

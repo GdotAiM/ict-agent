@@ -56,7 +56,7 @@ def run_cycle(symbol: str, mode: str = "chained") -> str:
     kernel = build_default_kernel()
     adapter = _build_adapter()
     session = SessionLog.start(symbol)
-    ctx = RunContext()
+    ctx = RunContext(symbol=symbol)
 
     user_message = (
         f"Run a full ICT top-down analysis on {symbol}. "
@@ -160,7 +160,7 @@ def run_prompt_set(
     kernel = build_default_kernel()
     adapter = _build_adapter()
     session = SessionLog.start(f"{symbol}_{set_name}")
-    ctx = RunContext()
+    ctx = RunContext(symbol=symbol)
 
     week_start = None
     m = re.match(r"\s*(\d{4}-\d{2}-\d{2})", week_label or "")

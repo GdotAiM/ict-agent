@@ -12,13 +12,19 @@ def get_order_blocks(df: pd.DataFrame, displacement_atr_mult: float = 1.5,
                       max_results: int = 5) -> list:
     tr = (df["high"] - df["low"])
     atr = tr.rolling(14).mean()
+    # Fallback ATR: use mean of available ATR values when rolling window is too small
+    # This ensures OB detection works even with short lookback windows (<14 bars)
+    fallback_atr = float(tr.mean()) if len(tr) >= 2 else float(tr.iloc[0]) if len(tr) == 1 else 1.0
 
     obs = []
     o, h, l, c = df["open"].values, df["high"].values, df["low"].values, df["close"].values
 
     for i in range(15, len(df)):
         body = c[i] - o[i]
-        is_displacement = abs(body) > (atr.iloc[i] * displacement_atr_mult if not pd.isna(atr.iloc[i]) else float("inf"))
+        a = atr.iloc[i]
+        if pd.isna(a):
+            a = fallback_atr
+        is_displacement = abs(body) > (a * displacement_atr_mult)
         if not is_displacement:
             continue
 

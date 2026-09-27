@@ -29,15 +29,16 @@ def get_fair_value_gaps(df: pd.DataFrame, max_results: int = 10) -> list:
                 "formed_at": str(idx[i]),
             })
 
-    # mark fill status against price after formation
+    # ICT: a FVG is "filled" when price retraces into the gap zone
+    # Bullish FVG [bottom, top]: filled when bottom <= close <= top
+    # Bearish FVG [bottom, top]: filled when bottom <= close <= top
     last_close = float(c[-1])
     for g in gaps:
-        mid = (g["top"] + g["bottom"]) / 2
-        if g["type"] == "bullish":
-            g["filled"] = last_close < g["bottom"]
+        if g["bottom"] <= last_close <= g["top"]:
+            g["filled"] = True
         else:
-            g["filled"] = last_close > g["top"]
-        g["midpoint"] = mid
+            g["filled"] = False
+        g["midpoint"] = (g["top"] + g["bottom"]) / 2
 
     unfilled = [g for g in gaps if not g["filled"]]
     return unfilled[-max_results:] if unfilled else gaps[-max_results:]

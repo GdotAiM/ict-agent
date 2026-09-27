@@ -21,7 +21,7 @@ const providers = {
   openrouter: { baseUrl: 'https://openrouter.ai/api/v1', modelKey: 'OPENROUTER_API_KEY', defaultModel: 'google/gemma-4-31b-it:free', apiType: 'openai' },
 };
 
-let provider = 'bylby';
+let provider = 'bynara';
 let apiKey = api_key || '';
 let baseUrl = 'https://router.bynara.id';
 let apiType = 'anthropic';

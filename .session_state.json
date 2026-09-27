@@ -1,0 +1,80 @@
+{
+  "XAUUSD": {
+    "last_bias": "BULLISH",
+    "last_decision": "watch",
+    "streaks": {
+      "unknown": 1,
+      "no_setup": 2,
+      "watch": 1
+    },
+    "last_scan_ts": 1790511001.9444125
+  },
+  "NAS100": {
+    "last_bias": "BEARISH",
+    "last_decision": "no_setup",
+    "streaks": {
+      "no_setup": 1,
+      "watch": 1
+    },
+    "last_scan_ts": 1789645938.588947
+  },
+  "EURUSD_XX": {
+    "last_bias": "BULLISH",
+    "last_decision": "no_setup",
+    "streaks": {
+      "watch": 1,
+      "no_setup": 1
+    },
+    "last_scan_ts": 1789646150.134936
+  },
+  "GBPUSD_XX": {
+    "last_bias": "BEARISH",
+    "last_decision": "no_setup",
+    "streaks": {
+      "no_setup": 3,
+      "watch": 5
+    },
+    "last_scan_ts": 1789646447.5544577
+  },
+  "EURUSD": {
+    "last_bias": "BEARISH",
+    "last_decision": "no_setup",
+    "streaks": {
+      "watch": 1,
+      "no_setup": 1
+    },
+    "last_scan_ts": 1788960809.1081707
+  },
+  "GBPUSD": {
+    "last_bias": "BEARISH",
+    "last_decision": "no_setup",
+    "streaks": {
+      "no_setup": 1
+    },
+    "last_scan_ts": 1788937994.190442
+  },
+  "SPY": {
+    "last_bias": "UNKNOWN",
+    "last_decision": "no_setup",
+    "streaks": {
+      "no_setup": 2,
+      "watch": 3
+    },
+    "last_scan_ts": 1789454549.6670845
+  },
+  "DXY": {
+    "last_bias": "BEARISH",
+    "last_decision": "watch",
+    "streaks": {
+      "no_setup": 1,
+      "watch": 1
+    },
+    "last_scan_ts": 1789366688.1033258
+  },
+  "TEST_SYM": {
+    "last_bias": "BULLISH",
+    "last_decision": "trade",
+    "streaks": {},
+    "last_scan_ts": 1790512219.3367295
+  }
+}

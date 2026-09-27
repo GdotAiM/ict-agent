@@ -7,6 +7,7 @@ Triggers:
   - Pre-NY        12:25 UTC (daily, Mon-Fri)
   - NY Open       12:30 UTC (daily, Mon-Fri)
   - Hourly        during active sessions (07:00-16:00 UTC)
+  - Wed ★       Reversal gate — hourly coverage critical
 
 Usage:
   python autorun.py           # start scheduler (blocking)
@@ -62,14 +63,16 @@ from harness.kernel import build_default_kernel
 from harness.context import RunContext
 
 
-WATCHLIST = ['XAUUSD', 'NAS100', 'EURUSD=X', 'GBPUSD=X']
+WATCHLIST = ['DXY', 'XAUUSD', 'NAS100', 'SPY', 'EURUSD=X', 'GBPUSD=X']
 
 
 def run_scan() -> dict:
     """Run full ICT chain on all symbols. Returns {symbol: result_summary}."""
     init_db()
     kernel = build_default_kernel()
-    ctx = RunContext()
+    # Default to first watchlist item so RunContext has a symbol before the loop
+    sym = WATCHLIST[0] if WATCHLIST else 'NAS100'
+    ctx = RunContext(symbol=sym)
     results = {}
 
     print(f"\n{'='*65}")
@@ -194,6 +197,7 @@ def main():
     print(f" Triggers: pre-London 06:55, London 07:00, pre-NY 12:25, NY 12:30, hourly 07-16")
     print()
 
+    # Wednesday = reversal gate day — hourly scans ensure coverage
     every().day.at('06:55').do(run_scan).tag('pre-london')
     every().day.at('07:00').do(run_scan).tag('london-open')
     every().day.at('12:25').do(run_scan).tag('pre-ny')

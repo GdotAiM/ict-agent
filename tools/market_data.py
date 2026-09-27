@@ -8,7 +8,14 @@ SSL note (Windows/Python 3.14): curl_cffi used by yfinance ignores env-based
 CA bundle vars. We skip yfinance and go straight to the TV CDP fallback which
 uses Node.js + its own working TLS stack.
 """
+import ssl
+# CRITICAL: Patch the default SSL context BEFORE any HTTP-capable library is imported.
+# yfinance uses curl_cffi internally which reads the default SSL context at import time;
+# without this patch, all Yahoo Finance requests fail with SSL cert verify errors on Windows.
+ssl._create_default_https_context = ssl._create_unverified_context
+
 import pandas as pd
+import yfinance as yf
 from harness.plugin import ToolPlugin
 
 
