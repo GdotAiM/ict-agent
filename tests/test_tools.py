@@ -419,3 +419,30 @@ if __name__ == '__main__':
                     errors.append((test.__class__.__name__, name, str(e)))
     print(f'\n{passed} passed, {failed} failed')
     sys.exit(1 if failed > 0 else 0)
+
+
+# ---------------------------------------------------------------------------
+# Execution / Dry-run tests
+# ---------------------------------------------------------------------------
+
+class TestExecution:
+    def test_dry_run_mode(self):
+        import config
+        from tools.execution import place_paper_trade
+        original = config.DRY_RUN
+        config.DRY_RUN = True
+        result = place_paper_trade('SPY', 'long', 580.0, 575.0, 585.0)
+        assert result['dry_run'] == True
+        assert result['would_place'] == True
+        assert result['qty'] > 0
+        config.DRY_RUN = original
+
+    def test_dry_run_zero_qty(self):
+        import config
+        from tools.execution import place_paper_trade
+        original = config.DRY_RUN
+        config.DRY_RUN = True
+        result = place_paper_trade('SPY', 'long', 580.0, 580.0, 585.0)
+        assert result['placed'] == False
+        assert result['reason'] == 'calculated position size was 0'
+        config.DRY_RUN = original

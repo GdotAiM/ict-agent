@@ -55,14 +55,62 @@ def place_paper_trade(symbol: str, direction: str, entry: float,
     Places a market order with attached stop-loss and take-profit
     (an Alpaca bracket order). Sizes the position off account equity and
     RISK_PER_TRADE_PCT unless risk_pct is overridden.
+
+    In DRY_RUN mode (config.DRY_RUN=True), the trade is calculated and logged
+    but NOT submitted to Alpaca. This allows full pipeline validation without
+    risking paper capital.
     """
     risk_pct = risk_pct or config.RISK_PER_TRADE_PCT
+
+    # DRY_RUN: simulate but don't execute — no API key needed
+    if getattr(config, 'DRY_RUN', False):
+        qty = max(int((50000.0 * (risk_pct / 100)) / abs(entry - stop)), 0) if abs(entry - stop) > 0 else 0
+        if qty <= 0:
+            return {"placed": False, "reason": "calculated position size was 0", "dry_run": True}
+        import logging
+        logging.getLogger(__name__).info(
+            f"[DRY-RUN] Would place {'LONG' if direction == 'long' else 'SHORT'} "
+            f"{symbol} qty={qty} entry={entry} stop={stop} target={target}"
+        )
+        return {
+            "placed": False,
+            "dry_run": True,
+            "reason": "Dry run mode — trade not submitted to broker",
+            "would_place": True,
+            "symbol": symbol,
+            "direction": direction,
+            "qty": qty,
+            "entry_ref": entry,
+            "stop": stop,
+            "target": target,
+        }
+
     acct = get_account_info()
     qty = calc_position_size(acct["equity"], entry, stop, risk_pct)
     if qty <= 0:
         return {"placed": False, "reason": "calculated position size was 0"}
 
     side = OrderSide.BUY if direction == "long" else OrderSide.SELL
+
+    # DRY_RUN: simulate but don't execute
+    if getattr(config, 'DRY_RUN', False):
+        import logging
+        logging.getLogger(__name__).info(
+            f"[DRY-RUN] Would place {'LONG' if direction == 'long' else 'SHORT'} "
+            f"{symbol} qty={qty} entry={entry} stop={stop} target={target}"
+        )
+        return {
+            "placed": False,
+            "dry_run": True,
+            "reason": "Dry run mode — trade not submitted to broker",
+            "would_place": True,
+            "symbol": symbol,
+            "direction": direction,
+            "qty": qty,
+            "entry_ref": entry,
+            "stop": stop,
+            "target": target,
+        }
 
     order = MarketOrderRequest(
         symbol=symbol,

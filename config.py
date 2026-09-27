@@ -85,6 +85,10 @@ KILL_ZONES_UTC = {
 # Where the memory DB lives
 DB_PATH = os.getenv("ICT_AGENT_DB", "ict_agent.db")
 
+# Dry-run mode: when True, trade placement is logged but NOT executed
+# Set via ICT_DRY_RUN=true in .env to validate logic without placing orders
+DRY_RUN = os.getenv("ICT_DRY_RUN", "false").lower() == "true"
+
 CEREBRAS_API_KEY = os.getenv("CEREBRAS_API_KEY", "")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
