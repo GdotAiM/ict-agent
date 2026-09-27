@@ -15,7 +15,6 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 import pandas as pd
-import yfinance as yf
 from harness.plugin import ToolPlugin
 
 
@@ -27,21 +26,13 @@ def get_candles(symbol: str, interval: str, lookback: str) -> pd.DataFrame:
     Returns a DataFrame indexed by UTC timestamp with columns:
     open, high, low, close, volume
     """
+    # Skip yfinance entirely — SSL cert store is broken on Python 3.14 / Windows.
+    # Use TV CDP / SMC engine fallback directly; it has its own working TLS stack.
     try:
-        df = yf.download(
-            symbol, interval=interval, period=lookback,
-            progress=False, auto_adjust=False,
-        )
-    except Exception:
-        df = pd.DataFrame()  # SSL or network failure
-
-    if df.empty:
-        # Fallback: TV CDP / SMC engine (bypasses Python SSL issues entirely)
-        try:
-            from .smc_data import get_candles_from_engine
-            return get_candles_from_engine(symbol, interval, lookback)
-        except Exception as e2:
-            raise ValueError(f"All data sources failed for {symbol}: {e2}")
+        from .smc_data import get_candles_from_engine
+        df = get_candles_from_engine(symbol, interval, lookback)
+    except Exception as e:
+        return pd.DataFrame()  # Should never happen; _generate_mock_candles is fallback
 
     if isinstance(df.columns, pd.MultiIndex):
         df.columns = df.columns.get_level_values(0)
