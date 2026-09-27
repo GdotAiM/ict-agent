@@ -386,40 +386,6 @@ class TestOrderBlocks:
         assert isinstance(result, list)
 
 
-# ---------------------------------------------------------------------------
-# Main entry point
-# ---------------------------------------------------------------------------
-
-if __name__ == '__main__':
-    import traceback
-    tests = [
-        TestFVG(),
-        TestStructure(),
-        TestPDArray(),
-        TestLiquidity(),
-        TestGates(),
-        TestKernel(),
-        TestLiquidityVoids(),
-        TestPowerOf3(),
-        TestOrderBlocks(),
-    ]
-    passed = 0
-    failed = 0
-    errors = []
-    for test in tests:
-        for name in dir(test):
-            if name.startswith('test_'):
-                try:
-                    getattr(test, name)()
-                    print(f'PASS: {test.__class__.__name__}.{name}')
-                    passed += 1
-                except Exception as e:
-                    print(f'FAIL: {test.__class__.__name__}.{name} - {e}')
-                    failed += 1
-                    errors.append((test.__class__.__name__, name, str(e)))
-    print(f'\n{passed} passed, {failed} failed')
-    sys.exit(1 if failed > 0 else 0)
-
 
 # ---------------------------------------------------------------------------
 # Execution / Dry-run tests
@@ -446,3 +412,41 @@ class TestExecution:
         assert result['placed'] == False
         assert result['reason'] == 'calculated position size was 0'
         config.DRY_RUN = original
+
+
+# ---------------------------------------------------------------------------
+# Main entry point
+# ---------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    import traceback
+    tests = [
+        TestFVG(),
+        TestStructure(),
+        TestPDArray(),
+        TestLiquidity(),
+        TestGates(),
+        TestKernel(),
+        TestLiquidityVoids(),
+        TestPowerOf3(),
+        TestOrderBlocks(),
+        TestExecution(),
+    ]
+    passed = 0
+    failed = 0
+    errors = []
+    for test in tests:
+        for name in dir(test):
+            if name.startswith('test_'):
+                try:
+                    getattr(test, name)()
+                    print(f'PASS: {test.__class__.__name__}.{name}')
+                    passed += 1
+                except Exception as e:
+                    print(f'FAIL: {test.__class__.__name__}.{name} - {e}')
+                    failed += 1
+                    errors.append((test.__class__.__name__, name, str(e)))
+    print(f'\n{passed} passed, {failed} failed')
+    sys.exit(1 if failed > 0 else 0)
+
+
