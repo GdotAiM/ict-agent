@@ -152,8 +152,15 @@ def get_candles_from_engine(symbol: str, interval: str, lookback_days: int = 10)
 
 
 def _generate_mock_candles(symbol: str, interval: str, lookback: str = "10d") -> pd.DataFrame:
-    """Generate realistic mock candle data for testing."""
+    """Generate realistic mock candle data for testing.
+
+    NOTE: This is SYNTHETIC data — the random walk is seeded with a stable
+    CRC32 of the symbol name so results are reproducible across processes,
+    but the prices are NOT real market prices. Any analysis built on this
+    must be treated as pipeline validation only, not tradeable signal.
+    """
     import numpy as np
+    import zlib
 
     # Parse lookback to get days (handle "10d", "5d", etc.)
     try:
@@ -171,11 +178,17 @@ def _generate_mock_candles(symbol: str, interval: str, lookback: str = "10d") ->
     }
     base = base_prices.get(symbol, 100.0)
 
+    # Log once per process that we're in mock mode
+    if not getattr(_generate_mock_candles, "_warned", False):
+        _generate_mock_candles._warned = True
+        print(f"[DATA-WARN] No live data source available — using SYNTHETIC mock candles "
+              f"for {symbol}. Levels are NOT real prices.", file=__import__("sys").stderr)
+
     # Generate candles
     n_candles = days * 24 if interval == "1h" else days * 96  # 96 15m bars per day
     dates = pd.date_range(end=datetime.now(timezone.utc), periods=n_candles, freq=interval)
 
-    np.random.seed(hash(symbol) % 2**32)
+    np.random.seed(zlib.crc32(symbol.upper().encode()) % 2**32)
     returns = np.random.randn(n_candles) * 0.001
     prices = base * (1 + np.cumsum(returns))
 
