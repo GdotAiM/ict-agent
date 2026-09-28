@@ -129,22 +129,28 @@ def get_candles_from_engine(symbol: str, interval: str, lookback_days: int = 10)
                     with open(engine_file) as f:
                         data = json.load(f)
 
-                    # Extract candles from engine output
-                    if "candles" in data:
-                        candles = data["candles"]
-                        df = pd.DataFrame(candles)
-                        if "timestamp" in df.columns:
-                            df["timestamp"] = pd.to_datetime(df["timestamp"])
-                            df.set_index("timestamp", inplace=True)
-                        return df
-
-                    # Try raw candle data
-                    if "raw_candles" in data:
-                        candles = data["raw_candles"]
-                        df = pd.DataFrame(candles)
-                        return df
+                    candles = data.get("candles") or data.get("raw_candles")
+                    if not candles:
+                        continue
+                    df = pd.DataFrame(candles)
+                    # Normalize column casing (engine files vary: "Open" vs "open")
+                    df.columns = [str(c).lower() for c in df.columns]
+                    # Validate required OHLC columns — reject malformed engine files
+                    required = {"open", "high", "low", "close"}
+                    if not required.issubset(df.columns):
+                        print(f"[WARN] Engine file {engine_file.name} missing OHLC cols "
+                              f"({sorted(required - set(df.columns))}) — skipping")
+                        continue
+                    for ts_col in ("timestamp", "time", "ts", "datetime"):
+                        if ts_col in df.columns:
+                            df[ts_col] = pd.to_datetime(df[ts_col])
+                            df.set_index(ts_col, inplace=True)
+                            break
+                    return df[["open", "high", "low", "close"] +
+                              (["volume"] if "volume" in df.columns else [])]
 
                 except Exception as e:
+                    print(f"[WARN] Engine file read failed ({engine_file.name}): {e}")
                     continue
 
     # Fall back to mock data if no data found
