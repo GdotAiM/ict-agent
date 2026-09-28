@@ -18,76 +18,72 @@ def get_candles_from_tv(symbol: str, interval: str) -> pd.DataFrame | None:
     tf_map = {"1h": "60", "15m": "15", "5m": "5", "1m": "1", "4h": "240", "1d": "D", "1w": "W", "15": "15", "5": "5", "1": "1", "60": "60", "240": "240"}
     resolution = tf_map.get(interval, interval)
 
-    tmpfile = tempfile.mktemp(suffix=".json")
-    try:
-        result = subprocess.run(
-            ["node", r"C:\Users\cash\smc-icm-trading\tools\tv-mcp\fetch_candles.cjs",
-             "--pair", sym, "--tf", interval, "--output", tmpfile],
-            capture_output=True, text=True, timeout=30
-        )
-        if result.returncode != 0:
-            return None
-        with open(tmpfile) as f:
-            raw = f.read().strip()
-        try:
-            parsed = json.loads(raw)
-            # Handle both formats:
-            # Format 1: Direct list of candles [{"time":..., "open":..., ...}]
-            # Format 2: Wrapped dict {"pair":"XAUUSD","timeframes":{"15m":{"candles":[...]}}}
-            if isinstance(parsed, list):
-                # Direct list format - check if first item has "time" field
-                if parsed and "time" in parsed[0]:
-                    df = pd.DataFrame(parsed)
-                    df["time"] = pd.to_datetime(df["time"], unit="ms", utc=True)
-                    df.set_index("time", inplace=True)
-                    return df
-                else:
-                    # List of dicts without time - wrap in expected format
-                    parsed = [{"timeframes": {interval: {"candles": parsed}}}]
+    # Try multiple CDP ports (9222 = default, 9333 = dedicated TV instance)
+    cdp_ports = [int(os.getenv("TV_CDP_PORT", "9222")), 9333]
 
-            if isinstance(parsed, dict):
-                tfs = parsed.get("timeframes", {})
-                tv_key = tf_map.get(interval, interval)
-                if tv_key in tfs and "candles" in tfs[tv_key]:
-                    candles = tfs[tv_key]["candles"]
-                    df = pd.DataFrame(candles)
-                    if "time" in df.columns:
-                        df["time"] = pd.to_datetime(df["time"], unit="ms", utc=True)
-                        df.set_index("time", inplace=True)
-                    # ── Cross-symbol contamination guard ──────────────────────
-                    # If the fetched close is wildly outside expected ranges for
-                    # this symbol, the CDP tab may still be on a different chart.
-                    _expected_ranges = {
-                        "EURUSD": (1.0, 1.5), "GBPUSD": (1.2, 1.6),
-                        "XAUUSD": (3000, 6000), "NAS100": (20000, 40000),
-                        "SPY": (600, 900), "USDOLLAR": (95, 120),
-                    }
-                    pair_key = sym.upper()
-                    if pair_key in _expected_ranges:
-                        lo, hi = _expected_ranges[pair_key]
-                        closes = df["close"].values
-                        if len(closes) > 0:
-                            last_close = float(closes[-1])
-                            if last_close < lo or last_close > hi:
-                                print(f"[WARN] Contamination detected: {sym}@{interval} returned close={last_close:.4f} "
-                                      f"outside expected [{lo}, {hi}] — discarding, will fall back")
-                                return None
-                    # ── End guard ─────────────────────────────────────────────
-                    return df
-        except Exception as e:
-            print(f"[WARN] TV CDP parse failed: {e}")
+    tmpfile = tempfile.mktemp(suffix=".json")
+    for cdp_port in cdp_ports:
+        try:
+            result = subprocess.run(
+                ["node", r"C:\Users\cash\smc-icm-trading\tools\tv-mcp\fetch_candles.cjs",
+                 "--pair", sym, "--tf", interval, "--output", tmpfile],
+                capture_output=True, text=True, timeout=15,
+                env={**os.environ, "CDP_PORT": str(cdp_port)},
+            )
+            if result.returncode == 0 and os.path.exists(tmpfile):
+                with open(tmpfile) as f:
+                    raw = f.read().strip()
+                if raw and not raw.startswith('{"error"'):
+                    return _parse_candle_output(raw, interval, tf_map, symbol)
+        except (subprocess.TimeoutExpired, FileNotFoundError):
+            continue
+    return None
+
+
+def _parse_candle_output(raw: str, interval: str, tf_map: dict, symbol: str) -> pd.DataFrame:
+    """Parse candle JSON into DataFrame, with cross-symbol contamination guard."""
+    try:
+        parsed = json.loads(raw)
+    except json.JSONDecodeError:
+        return None
+
+    df = None
+    if isinstance(parsed, list):
+        if parsed and "time" in parsed[0]:
+            df = pd.DataFrame(parsed)
+            df["time"] = pd.to_datetime(df["time"], unit="ms", utc=True)
+            df.set_index("time", inplace=True)
+    elif isinstance(parsed, dict):
+        tfs = parsed.get("timeframes", {})
+        tv_key = tf_map.get(interval, interval)
+        if tv_key in tfs and "candles" in tfs[tv_key]:
+            candles = tfs[tv_key]["candles"]
+            df = pd.DataFrame(candles)
             if "time" in df.columns:
                 df["time"] = pd.to_datetime(df["time"], unit="ms", utc=True)
                 df.set_index("time", inplace=True)
-            return df
-    except Exception as e:
-        print(f"[WARN] TV CDP fetch failed for {symbol}@{interval}: {e}")
-    finally:
-        try:
-            os.unlink(tmpfile)
-        except:
-            pass
-    return None
+
+    if df is None or df.empty:
+        return None
+
+    # ── Cross-symbol contamination guard ──────────────────────
+    _expected_ranges = {
+        "EURUSD": (1.0, 1.5), "GBPUSD": (1.2, 1.6),
+        "XAUUSD": (3000, 6000), "NAS100": (20000, 40000),
+        "SPY": (600, 900), "USDOLLAR": (95, 120),
+    }
+    pair_key = symbol.replace("=X", "").upper()
+    if pair_key in _expected_ranges:
+        lo, hi = _expected_ranges[pair_key]
+        closes = df["close"].values
+        if len(closes) > 0:
+            last_close = float(closes[-1])
+            if last_close < lo or last_close > hi:
+                print(f"[WARN] Contamination detected: {symbol.replace('=X','')}@{interval} returned close={last_close:.4f} "
+                      f"outside expected [{lo}, {hi}] — discarding")
+                return None
+    # ── End guard ─────────────────────────────────────────────
+    return df
 
 
 def get_candles_from_engine(symbol: str, interval: str, lookback_days: int = 10) -> pd.DataFrame:
