@@ -63,7 +63,7 @@ STAGE_ORDER = ["htf_bias", "timing", "ltf_entry", "risk_exec"]
 STAGE_STRUCTURED_HINTS = {
     "htf_bias": """
 At the end of your response, output this exact JSON (no markdown fences):
-{"bias": "BEARISH", "draw_on_liquidity": "SSL at 4617.28", "pd_array": "PREMIUM"}
+{"bias": "BEARISH", "draw_on_liquidity": "SSL at {price} or BSL at {price}", "pd_array": "PREMIUM"}
 Valid bias: BULLISH, BEARISH, RANGING. Valid pd_array: PREMIUM, DISCOUNT, EQUILIBRIUM.
 """,
     "timing": """
@@ -73,7 +73,7 @@ Valid kill_zone: LONDON, NY_AM, NY_PM, ASIAN, OUTSIDE.
 """,
     "ltf_entry": """
 At the end of your response, output this exact JSON (no markdown fences):
-{"entry_trigger": "NONE", "invalidation": "Above 4625", "target": "4594.52"}
+{"entry_trigger": "NONE", "invalidation": "<price-level-or-NONE>", "target": "<price-level-or-NONE>"}
 Set entry_trigger="NONE" if no clean trigger exists.
 """,
     "risk_exec": """
